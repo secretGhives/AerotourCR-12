@@ -1573,7 +1573,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner { padding
 footer { background: rgba(255, 255, 255, 0.96); }
 footer #sitemap { overflow: hidden; padding: 13px 0 0 32px; }
 footer #sitemap address { padding: 32px 0 0 42px; }
-footer aside { text-align: rigth; }
+footer aside { text-align: right; }
 
 address strong, address tel, address a { display: block; }
 
