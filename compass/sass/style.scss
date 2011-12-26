@@ -1,0 +1,110 @@
+// Custom Functions
+@import "functions/golden-ratio";
+@import "functions/grid-width";
+@import "functions/linear-gradient";
+@import "functions/radial-gradient";
+@import "functions/tint-shade";
+
+// Addons & other mixins
+@import "modules/normalize";
+@import "modules/base";
+@import "modules/fonts";
+@import "modules/button";
+@import "modules/position";
+@import "modules/timing-functions";
+@import "modules/html5-input-types";
+
+// CSS3 Mixins
+@import "css3/animation";
+@import "css3/appearance";
+@import "css3/background-image";
+@import "css3/background-size";
+@import "css3/border-image";
+@import "css3/border-radius";
+@import "css3/box-shadow";
+@import "css3/box-sizing";
+@import "css3/columns";
+@import "css3/flex-box";
+@import "css3/inline-block";
+@import "css3/linear-gradient";
+@import "css3/radial-gradient";
+@import "css3/transform";
+@import "css3/transition";
+
+// Partials
+@import "partials/typo";
+@import "partials/layout";
+@import "partials/helpers";
+@import "partials/ie";
+@import "partials/ui";
+@import "partials/header";
+@import "partials/tips";
+@import "partials/flexdd";
+@import "partials/breadcrumbs";
+@import "partials/nav";
+@import "partials/modal";
+@import "partials/table";
+@import "partials/pager";
+@import "partials/form";
+@import "partials/mediagrid";
+@import "partials/tabpill";
+@import "partials/btnalert";
+@import "partials/login";
+@import "partials/footer";
+
+
+
+/* @group Variables */
+/* Variables to customize the look and feel of pviewUI  */
+
+// Site settings
+$siteWidth:   960px;
+$imagefolder: "../img/";
+
+// Links
+$linkColor:         #0069d6;
+$linkColorHover:    darken($linkColor, 15);
+
+// Grays
+$black:             #000;
+$grayDark:          lighten($black, 25%);
+$gray:              lighten($black, 50%);
+$grayLight:         lighten($black, 75%);
+$grayLighter:       lighten($black, 90%);
+$white:             #fff;
+
+// Accent Colors
+$blue:              #049CDB;
+$blueDark:          #0064CD;
+$green:             #46a546;
+$red:               #9d261d;
+$yellow:            #ffc40d;
+$orange:            #f89406;
+$pink:              #c3325f;
+$purple:            #7a43b6;
+
+// Baseline grid
+$basefont:          13px;
+$baseline:          18px;
+
+// Griditude
+// Modify the grid styles in mixins.scss
+$gridColumns:       16;
+$gridColumnWidth:   40px;
+$gridGutterWidth:   20px;
+$extraSpace:        ($gridGutterWidth * 2); // For our grid calculations
+$siteWidth:         ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+// Color Scheme
+// Use this to roll your own color schemes
+$baseColor:         $blue;                  // Set a base color
+//$complement:        spin($baseColor, 180);  // Determine a complementary color
+//$split1:            spin($baseColor, 158);  // Split complements
+//$split2:            spin($baseColor, -158);
+//$triad1:            spin($baseColor, 135);  // Triads colors
+//$triad2:            spin($baseColor, -135);
+//$tetra1:            spin($baseColor, 90);   // Tetra colors
+//$tetra2:            spin($baseColor, -90);
+//$analog1:           spin($baseColor, 22);   // Analogs colors
+//$analog2:           spin($baseColor, -22);
+/* @end */

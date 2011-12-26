@@ -1,0 +1,16 @@
+footer {
+	@extend .unselectable;
+	background: rgba(255, 255, 255,0.96);
+
+	#sitemap {
+		overflow: hidden;
+		padding: 13px 0 0 32px;
+		address {	padding: 32px 0 0 42px;	}
+	}
+
+	aside { text-align: rigth; }
+}
+
+address {
+	strong, tel, a { display: block; }
+}

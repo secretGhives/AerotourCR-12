@@ -1,0 +1,571 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/libs/modernizr-2.0.6.min.js"></script>
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>-->
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js"><\/script>')</script>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+	  <script type="text/javascript" src="js/libs/selectivizr.js"></script>
+	<![endif]-->
+	<script src="js/libs/flexie.js"></script>
+	<script src="js/libs/jquery.flexbox.min.js"></script>
+
+	<script defer src="js/partials/alerts.js"></script>
+	<script defer src="js/partials/buttons.js"></script>
+	<script defer src="js/partials/dropdown.js"></script>
+	<script defer src="js/partials/modal.js"></script>
+	<script defer src="js/partials/twipsy.js"></script>
+	<script defer src="js/partials/popover.js"></script>
+	<script defer src="js/partials/tabs.js"></script>
+	<script defer src="js/partials/color.js"></script>
+	<script defer src="js/partials/postoffice.js"></script>
+
+	<script defer src="js/plugins.js"></script>
+	<script defer src="js/script.js"></script>
+
+	<!-- Run a site tour -->
+	<script defer src="js/partials/tour.js"></script>
+</head>
+
+<body>
+
+<section id="main-wrap" class="flex-layout flex-layout-3-1">
+
+	<header id="site-header" class="box horizontal pack-justify gradientGrey">
+
+		<section id="header-logo" class="box align-center">
+			<h1 id="site-logo" data-title="SEARCHREV"> <a href="#">S<span>R</span></a></h1>
+		</section>
+		
+		<section id="header-client" class="box align-center">
+			<div id='client_list'></div>
+			<form name="SearchrevClientRedirector" class="hide">
+			<select id="client_select" name="client_select">
+				<option>Youtube very</option>
+				<option>Youtube very lon</option>
+			</select>
+			</form>
+		</section>
+		
+		<section id="header-buttons" class="box flex1 align-center">
+		<!-- EMPTY TILL FURTHER NOTICE -->
+		</section>
+		
+		<section id="header-msg" class="box vertical pack-justify align-center gradientLight">
+			<label id="header-message-count">666</label>
+			<button id="header-message-add" data-controls-modal="modal-postoffice" data-backdrop="true" data-keyboard="true" data-toggle="toggle" class="h-btn ico_email">+ </button>
+			<div id="postoffice" class="box vertical pack-justify">
+				<form id="postoffice-new-message" class="order-1">
+					<label><input name="inpMessage" id="msgUrgent" type="checkbox" value="1"> Urgent?</label>
+					<textarea id="poMessage"></textarea>
+					<button id="poSubmit" class="btn primary info">Post</button>
+					<button id="poCancel" class="btn">Cancel</button>
+				</form>
+				<ol id="poMessages" class="box vertical order-2 flex1">
+				<li class="msgLi green">fsdfsd</li>
+				<li class="msgLi green">fsdfsd</li>
+				<li class="msgLi green">fsdfsd</li>
+				<li class="msgLi red">fsdfsd</li>
+				<li class="msgLi green">fsdfsd</li>
+				<li class="msgLi red">fsdfsd</li>
+				<li class="msgLi red">fsdfsd</li>
+				<li class="msgLi green">fsdfsd</li>
+				<li class="msgLi green">fsdfsd</li>
+				<li class="msgLi green">fsdfsd</li>
+				<li class="msgLi green">fsdfsd</li>
+				<li class="msgLi red">fsdfsd</li>
+				<li class="msgLi green">fsdfsd</li>
+				<li class="msgLi red">fsdfsd</li>
+				<li class="msgLi red">fsdfsd</li>
+				<li class="msgLi green">fsdfsd</li>
+				</ol>
+			</div>
+		</section>
+						
+		<section id="header-user" class="box align-center  gradientLight">
+			<img id="header-client-logo" alt="" class="no-image" />
+			<div class="box vertical">
+				<label id="header-user-name">Alekse Kuzenkov</label>
+				<label id="header-client-name">Youtube Videos UK</label>
+			</div>
+			<button id="header-message-add" class="h-btn ico_action">X</button>
+		</section>
+	</header>
+
+	<section id="form-main" role="main">
+		<section id="form-content">
+
+			<div class="top-bar id-topBar">
+
+				<div class="breadcrumb gradient square">
+					<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="#" itemprop="url">
+							<span itemprop="title" class="ico star">Home</span>
+						</a>
+						<span class="separator">&gt;</span>
+					</div>  
+					<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="#/real" itemprop="url">
+							<span itemprop="title" class="ico link">Administration</span>
+						</a>
+						<span class="separator">&gt;</span>
+					</div>  
+					<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="#" itemprop="url" rel="pop" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A title" data-placement="below">
+							<span itemprop="title" class="ico link">Form Name</span>
+						</a>
+						<span class="separator">&gt;</span>
+					</div>
+				</div>
+
+				<div class="top-bar-settings-button">
+					<button class="s-btn" value="flex-layout flex-layout-3-1" onclick="document.getElementById('main-wrap').className=this.value" rel="tip" title="Menu">¹</button>
+					<button class="s-btn" value="flex-layout flex-layout-2-1" onclick="document.getElementById('main-wrap').className=this.value" rel="tip" title="Options">³</button>
+					<button class="s-btn" value="flex-layout flex-layout-1" onclick="document.getElementById('main-wrap').className=this.value" rel="tip" title="Table">²</button>
+				</div>
+			</div>
+
+			<!-- CONTENT STARTS HERE -->
+			<div class="container-fluid">
+				<form>
+
+					<!-- Alerts -->
+					<div class="alert-message warning fade in" data-alert="alert">
+						<a class="close" href="#">×</a>
+						<p><strong>Holy guacamole!</strong> Best check yo self, you’re not looking too good.</p>
+					</div>
+
+					<div class="alert-message error" data-alert="alert">
+						<a class="close" href="#">×</a>
+						<p><strong>Oh snap!</strong> Change this and that and <a href="#">try again</a>.</p>
+					</div>
+					
+					<div class="alert-message success" data-alert="alert">
+						<a class="close" href="#">×</a>
+						<p><strong>Well done!</strong> You successfully <a href="#">read this</a> alert message.</p>
+					</div>
+					
+					<div class="alert-message info" data-alert="alert">
+						<a class="close" href="#">×</a>
+						<p><strong>Heads up!</strong> This is an alert that needs your attention, but it’s not <a href="#">a huge priority</a> just yet.</p>
+					</div>
+
+					<div class="alert-message block-message warning" data-alert="alert">
+						<a class="close" href="#">×</a>
+						<p><strong>Holy guacamole! This is a warning!</strong> Best check yo self, you’re not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						<div class="alert-actions">
+							<a class="btn small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
+						</div>
+					</div>
+					<div class="alert-message block-message error" data-alert="alert">
+						<a class="close" href="#">×</a>
+						<p><strong>Oh snap! You got an error!</strong> Change this and that and <a href="#">try again</a>.</p>
+						<ul>
+							<li>Duis mollis est non commodo luctus</li>
+							<li>Nisi erat porttitor ligula</li>
+							<li>Eget lacinia odio sem nec elit</li>
+						</ul>
+						<div class="alert-actions">
+							<a class="btn small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
+						</div>
+					</div>
+					<div class="alert-message block-message success" data-alert="alert">
+						<a class="close" href="#">×</a>
+						<p><strong>Well done!</strong> You successfully read this alert message. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum.</p>
+						<div class="alert-actions">
+							<a class="btn small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
+						</div>
+					</div>
+					<div class="alert-message block-message info" data-alert="alert">
+						<a class="close" href="#">×</a>
+						<p><strong>Heads up!</strong> This is an alert that needs your attention, but it’s not a huge priority just yet.</p>
+						<div class="alert-actions">
+							<a class="btn small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
+						</div>
+					</div>
+
+
+					<!-- tabs -->
+					<ul class="tabs" data-tabs="tabs">
+						<li class="active"><a href="#home">Home</a></li>
+						<li class=""><a href="#settings">Settings</a></li>
+						<li class="dropdown" data-dropdown="dropdown">
+							<a href="#" class="dropdown-toggle">Dropdown</a>
+							<ul class="dropdown-menu">
+								<li><a href="#fat">@fat</a></li>
+								<li><a href="#mdo">@mdo</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div id="my-tab-content" class="tab-content">
+						<div class="tab-pane active" id="home">
+
+							<div class="g-two-thirds">
+				        <fieldset>
+				          <legend>Example form legend</legend>
+				          <div class="clearfix">
+				            <label for="xlInput">X-Large input</label>
+				            <div class="input">
+				              <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label for="normalSelect">Select</label>
+				            <div class="input">
+				              <select name="normalSelect" id="normalSelect">
+				                <option>1</option>
+				                <option>2</option>
+				                <option>3</option>
+				                <option>4</option>
+				                <option>5</option>
+				              </select>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label for="mediumSelect">Select</label>
+				            <div class="input">
+				              <select class="medium" name="mediumSelect" id="mediumSelect">
+				                <option>1</option>
+				                <option>2</option>
+				                <option>3</option>
+				                <option>4</option>
+				                <option>5</option>
+				              </select>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label for="multiSelect">Multiple select</label>
+				            <div class="input">
+				              <select class="medium" size="5" multiple="multiple" name="multiSelect" id="multiSelect">
+				                <option>1</option>
+				                <option>2</option>
+				                <option>3</option>
+				                <option>4</option>
+				                <option>5</option>
+				              </select>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label>Uneditable input</label>
+				            <div class="input">
+				              <span class="uneditable-input">Some value here</span>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label for="disabledInput">Disabled input</label>
+				            <div class="input">
+				              <input class="xlarge disabled" id="disabledInput" name="disabledInput" size="30" type="text" placeholder="Disabled input here… carry on." disabled="">
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label for="disabledInput">Disabled textarea</label>
+				            <div class="input">
+				              <textarea class="medium" name="textarea" id="textarea" rows="3" disabled=""></textarea>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix error">
+				            <label for="errorInput">Input with error</label>
+				            <div class="input">
+				              <input class="xlarge error" id="errorInput" name="errorInput" size="30" type="text">
+				              <span class="help-inline">Small snippet of help text</span>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix success">
+				            <label for="successInput">Input with success</label>
+				            <div class="input">
+				              <input class="xlarge error" id="successInput" name="successInput" size="30" type="text">
+				              <span class="help-inline">Success!</span>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix warning">
+				            <label for="warningInput">Input with warning</label>
+				            <div class="input">
+				              <input class="xlarge error" id="warningInput" name="warningInput" size="30" type="text">
+				              <span class="help-inline">Ruh roh!</span>
+				            </div>
+				          </div><!-- /clearfix -->
+				        </fieldset>
+				        <fieldset>
+				          <legend>Example form legend</legend>
+				          <div class="clearfix">
+				            <label for="prependedInput">Prepended text</label>
+				            <div class="input">
+				              <div class="input-prepend">
+				                <span class="add-on">@</span>
+				                <input class="medium" id="prependedInput" name="prependedInput" size="16" type="text">
+				              </div>
+				              <span class="help-block">Here's some help text</span>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label for="prependedInput2">Prepended checkbox</label>
+				            <div class="input">
+				              <div class="input-prepend">
+				                <label class="add-on"><input type="checkbox" name="" id="" value=""></label>
+				                <input class="mini" id="prependedInput2" name="prependedInput2" size="16" type="text">
+				              </div>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label for="appendedInput">Appended checkbox</label>
+				            <div class="input">
+				              <div class="input-append">
+				                <input class="mini" id="appendedInput" name="appendedInput" size="16" type="text">
+				                <label class="add-on active"><input type="checkbox" name="" id="" value="" checked="checked"></label>
+				              </div>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label for="fileInput">File input</label>
+				            <div class="input">
+				              <input class="input-file" id="fileInput" name="fileInput" type="file">
+				            </div>
+				          </div><!-- /clearfix -->
+				        </fieldset>
+				        <fieldset>
+				          <legend>Example form legend</legend>
+				          <div class="clearfix">
+				            <label id="optionsCheckboxes">List of options</label>
+				            <div class="input">
+				              <ul class="inputs-list">
+				                <li>
+				                  <label>
+				                    <input type="checkbox" name="optionsCheckboxes" value="option1">
+				                    <span>Option one is this and that—be sure to include why it’s great</span>
+				                  </label>
+				                </li>
+				                <li>
+				                  <label>
+				                    <input type="checkbox" name="optionsCheckboxes" value="option2">
+				                    <span>Option two can also be checked and included in form results</span>
+				                  </label>
+				                </li>
+				                <li>
+				                  <label>
+				                    <input type="checkbox" name="optionsCheckboxes" value="option2">
+				                    <span>Option three can—yes, you guessed it—also be checked and included in form results. Let's make it super long so that everyone can see how it wraps, too.</span>
+				                  </label>
+				                </li>
+				                <li>
+				                  <label class="disabled">
+				                    <input type="checkbox" name="optionsCheckboxes" value="option2" disabled="">
+				                    <span>Option four cannot be checked as it is disabled.</span>
+				                  </label>
+				                </li>
+				              </ul>
+				              <span class="help-block">
+				                <strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.
+				              </span>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label>Date range</label>
+				            <div class="input">
+				              <div class="inline-inputs">
+				                <input class="small" type="text" value="May 1, 2011">
+				                <input class="mini" type="text" value="12:00am">
+				                to
+				                <input class="small" type="text" value="May 8, 2011">
+				                <input class="mini" type="text" value="11:59pm">
+				                <span class="help-block">All times are shown as Pacific Standard Time (GMT -08:00).</span>
+				              </div>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label for="textarea">Textarea</label>
+				            <div class="input">
+				              <textarea class="medium" id="textarea2" name="textarea2" rows="3"></textarea>
+				              <span class="help-block">
+				                Block of help text to describe the field above if need be.
+				              </span>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="clearfix">
+				            <label id="optionsRadio">List of options</label>
+				            <div class="input">
+				              <ul class="inputs-list">
+				                <li>
+				                  <label>
+				                    <input type="radio" checked="" name="optionsRadios" value="option1">
+				                    <span>Option one is this and that—be sure to include why it’s great</span>
+				                  </label>
+				                </li>
+				                <li>
+				                  <label>
+				                    <input type="radio" name="optionsRadios" value="option2">
+				                    <span>Option two can is something else and selecting it will deselect options 1</span>
+				                  </label>
+				                </li>
+				              </ul>
+				            </div>
+				          </div><!-- /clearfix -->
+				          <div class="actions">
+				            <input type="submit" class="btn primary" value="Save changes">&nbsp;<button type="reset" class="btn">Cancel</button>
+				          </div>
+				        </fieldset>
+							</div>
+							<div class="g-third">Some other stuff here</div>
+						</div>
+						<div class="tab-pane" id="settings">
+							<p><span class="label important">Important</span> Sunt qui biodiesel mollit officia, fanny pack put a bird on it thundercats seitan squid ad wolf bicycle rights blog. Et aute readymade farm-to-table carles 8-bit, nesciunt nulla etsy adipisicing organic ea. Master cleanse mollit high life, next level Austin nesciunt american apparel twee mustache adipisicing reprehenderit hoodie portland irony. Aliqua tofu quinoa +1 commodo eiusmod. High life williamsburg cupidatat twee homo leggings. Four loko vinyl DIY consectetur nisi, marfa retro keffiyeh vegan. Fanny pack viral retro consectetur gentrify fap.</p>
+						</div>
+						<div class="tab-pane" id="fat">
+							<p><span class="label warning">Warning</span> Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+						</div>
+						<div class="tab-pane" id="mdo">
+							<p><span class="label notice">Notice</span> Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<!-- CONTENT ENDS HERE -->
+
+		</section>
+
+		<aside id="side-a">
+		<!-- EMPTY TILL FURTHER NOTICE -->
+		</aside>
+
+		<aside id="side-b">
+		<nav class="side-b-nav">
+			<ul id="nav-b" class="button-group ">
+			
+			<!-- HOME -->
+			<li class="group-li"><a class="toolbar-button" href="javascript: goTo('/product_summary.php?client_id=<% $client_id %>',0);">Campaigns</a></li>
+			
+			<!-- NAVIGATOR -->
+			<li class="group-li"><a class="toolbar-button" href="javascript: goTo('/navigator.php',0);">Navigator</a></li>
+			
+			<!-- REPORTS -->
+			<li class="group-li h-menu">
+			<a class="toolbar-button menu-button" href="/searchrev_reports.php">Reports</a>
+					<ol class="h-dropdown left">
+					<li><a class="" href="/reporting_product_main.php?client_id=<%$client_id%>&network_id=<%$network_id%>&client_group_ids="><span>Account</span></a></li>
+							<li><a href="#"><span onclick="reportCenterWindow('new', <% $client_id %>);">Schedule</span></a></li>
+					<li><a class="" href="/all_accounts_report.php"><span>All Client Summary</span></a></li>
+					<li><a class="" href="/account_report.php"><span>Active Client Summary</span></a></li>
+					<li><a class="" href="/proirpt_admin.php"><span>PROI</span></a></li>
+					<li><a class="" href="/manage_report_group.php?client_id=<% $client_id %>&network_id=0"><span>Multi-Account</span></a></li>
+					<li><a class="" href="/seo_kw_report.php?client_id=<%$client_id%>"><span>Seo Keyword Report</span></a></li>
+					</ol>
+			</li>
+			
+			<!-- ADMINISTRATION -->
+			<li class="group-li h-menu">
+			<a class="toolbar-button menu-button" href="/searchrev_administration.php?client_id=<% $client_id %>">Admin</a>
+					<ol class="h-dropdown right">
+					<li id="client_account">
+					<a class="" href="/manage_client.php">
+					<div id="client_account_sub_menu" style="float: right; margin: 7px 7px 0 0;" class="hidden"></div>
+					<span class="menuLabel">Client Account</span>
+					</a>
+					</li>
+					<li><a class="" href="/manage_user.php"><span>Users</span></a></li>
+					<li><a class="" href="/manage_group.php"><span>Groups</span></a></li>
+					<li><a class="" href="/pv_narra_mapping.php"><span>Ad Network Mapping</span></a></li>
+					<li><a class="" href="/manage_default_rules.php"><span>Default Rules</span></a></li>
+					<li><a class="" href="/manage_multi_account_group.php"><span>Multi-Account reporting</span></a></li>
+					<li><a class="" href="/manage_upload_log.php"><span>Bulksheet Upload Log</span></a></li>
+					<li><a class="" href="/manage_upload_log.php?opt_rpt=1"><span>Optimization Log</span></a></li>
+					<li><a class="" href="/User_activity_log.php"><span>User Activity Log</span></a></li>
+					<li><a class="" href="javascript:launchAscheck(<%$client_id%>);"><span>Account Status Checking</span></a></li>
+					<li><a class="" href="javascript:launchAscheckAlerter('new', <% $client_id %>);"><span>E-mail Alerts</span></a></li>
+					<li><a class="" href="javascript:displaySummaryColumns('')"><span>Default summary columns</span></a></li>
+					<li><a class="" href="/tooltips.php"><span>Tooltips</span></a></li>
+					</ol>
+			</li>
+			
+			<!-- AUTO -->
+			<li class="group-li h-menu">
+			<a class="toolbar-button menu-button" href="/rtb.php?clientId=<%$client_id%>">Auto</a>
+					<ol class="h-dropdown left">
+					<li><a class="" href="/job_list.php"><span onclick="javascript:optimizedReportOptions();">Optimizer Reports</span></a></li>
+					<li><a class="" href="/job_list.php"><span>Reload Performance Data</span></a></li>
+					</ol>
+			</li>
+			
+			<!-- JOB LIST -->
+			<li class="group-li"><a class="toolbar-button" href="/job_list.php">Jobs</a></li>
+			
+			<!-- ANALYTICS -->
+			<li class="group-li"><a class="toolbar-button" href="javascript: goTo('/analytics.php?client_id=<% $client_id %>',0);">Analytics</a></li>
+			
+			<!-- DASHBOARD -->
+			<li class="group-li"><a class="toolbar-button" href="http://dashboard.searchrev.com/user/auto-login?sr3=<% $client_sr3 %>" rel="pop" data-content="Cool project Hans built" data-original-title="Dashboard" data-placement="right">Dashboard</a></li>
+			
+			<!-- HELP -->
+			<li class="group-li"><a class="toolbar-button" href="/help.php">Help</a></li>
+			</ul>
+		</nav>
+		</aside>
+
+	</section>
+
+	<footer id="site-footer" class="box horizontal pack-justify gradientGrey">
+		<section id="footer-left" class="box align-center">
+			<div>
+			<!-- EMPTY TILL FURTHER NOTICE -->
+			</div>
+		</section>
+				
+		<section id="footer-center" class="box flex1 align-center">
+		<!-- EMPTY TILL FURTHER NOTICE -->
+		</section>
+								
+		<section id="footer-right" class="box align-center  gradientLight">
+			<nav id="form-pager" class="box horizontal">
+			<!-- EMPTY TILL FURTHER NOTICE -->
+			</nav>
+		</section>
+	</footer>
+</section>
+
+<!-- Site tour guide -->
+<ol id="joyRideTipContent">
+	<li data-id="header-logo" data-text="Next: Navigation">
+		<p>this is our logo</p>
+	</li>
+	<li data-id="nav-b" data-text="Next: Toolbar">
+		<p>this is how you get around major areas</p>
+	</li>
+	<li data-id="form-toolbar" data-text="Next: Footer">
+		<p>all controls for the current table</p>
+	</li>
+	<li data-id="site-footer" data-text="Finish!">
+		<p>table pager</p>
+	</li>
+</ol>
+
+<!-- New message modal -->
+<div id="modal-postoffice" class="modal hide fade">
+	<div class="modal-header">
+		<a href="#" class="close">×</a>
+		<h3>New message <label><input name="modal-inpMessage" id="modal-msgUrgent" type="checkbox" value="1"> Urgent?</label></h3>
+
+	</div>
+	<div id="modal-postoffice-new-message" class="modal-body">
+		<textarea id="modal-poMessage"></textarea>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn primary">Post</a>
+		<a href="#" class="btn secondary">cancel</a>
+	</div>
+</div>
+	
+</body>
+</html>
