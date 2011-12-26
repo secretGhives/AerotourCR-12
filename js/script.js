@@ -20,12 +20,30 @@ $(function() {
 	$("a[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
 	$("a[rel=tip]").twipsy({live: true});
 
-	$(".sec-nav a").click(function(e) {
-		e.preventDefault();
-		$("li.active").removeClass("active");
+	// $(".sec-nav a").click(function(e) {
+	// 	e.preventDefault();
+	// 	$("li.active").removeClass("active");
 
-		$this = $(this);
-		$this.parent().toggleClass("active");
-	});
+	// 	$this = $(this);
+	// 	$this.parent().toggleClass("active");
+	// });
+
+	$(".sec-nav li").hover(
+		function () {
+			$(this).addClass("active");
+		}, 
+		function () {
+			$(this).removeClass("active");
+		}
+	);
+
+	$("#site-footer").hover(
+		function () {
+			$("#sitemap").addClass("active");
+		}, 
+		function () {
+			$("#sitemap").removeClass("active");
+		}
+	);
 
 });

@@ -1,14 +1,21 @@
 footer {
 	@extend .unselectable;
-	background: rgba(255, 255, 255,0.96);
+	//background: rgba(255, 255, 255,0.96);
+	position: absolute;
+	bottom: 0;
 
 	#sitemap {
 		overflow: hidden;
 		padding: 13px 0 0 32px;
+		background: rgba(255, 255, 255, 0.96);
+		z-index: 8;
+		height: 32px;
+		&.active { height: auto; }
 		address {	padding: 32px 0 0 42px;	}
+		h2 { font-size: 20px; }
 	}
 
-	aside { text-align: right; }
+	aside { text-align: right; background: rgba(255, 255, 255, 0.96); z-index: 9;}
 }
 
 address {
