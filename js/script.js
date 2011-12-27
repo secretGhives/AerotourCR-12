@@ -17,33 +17,47 @@ $(function() {
 	}
 
 	//load bootstrap stuff
-	$("a[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
-	$("a[rel=tip]").twipsy({live: true});
+	// $("a[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
+	// $("a[rel=tip]").twipsy({live: true});
 
-	// $(".sec-nav a").click(function(e) {
-	// 	e.preventDefault();
-	// 	$("li.active").removeClass("active");
-
-	// 	$this = $(this);
-	// 	$this.parent().toggleClass("active");
-	// });
-
-	$(".sec-nav li").hover(
-		function () {
-			$(this).addClass("active");
-		}, 
-		function () {
-			$(this).removeClass("active");
-		}
+	$("#toggleSitemap").toggle(
+	  function () {
+	    $("#sitemap").slideDown("fast");
+	  },
+	  function () {
+	    $("#sitemap").slideUp("fast");
+	  }
 	);
 
-	$("#site-footer").hover(
-		function () {
-			$("#sitemap").addClass("active");
-		}, 
-		function () {
-			$("#sitemap").removeClass("active");
-		}
-	);
+	$(".sec-nav a").click(selectNav);
 
+});
+
+function	selectNav(e) {
+		e.preventDefault();
+		$("p.info").hide();
+		$("nav.active").removeClass("active");
+
+		$this = $(this).parent();
+		$this.addClass('active').find('p').fadeIn("slow");
+}
+
+$(document).keydown(function (e) {
+	var keyCode = e.keyCode || e.which,
+			arrow = {left: 37, up: 38, right: 39, down: 40 };
+
+	switch (keyCode) {
+		case arrow.left:
+			console.log('left!');
+		break;
+		case arrow.up:
+			console.log('up!');
+		break;
+		case arrow.right:
+			console.log('right!');
+		break;
+		case arrow.down:
+			console.log('down!');
+		break;
+	}
 });
