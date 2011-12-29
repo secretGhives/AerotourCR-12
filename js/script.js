@@ -17,8 +17,9 @@ $(function() {
 	}
 
 	//load bootstrap stuff
-	// $("a[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
-	// $("a[rel=tip]").twipsy({live: true});
+	$("[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
+	//$("[rel=tip]").twipsy({live: true});
+	$("[rel=roundabout]").roundabout();
 
 	$("#toggleSitemap").toggle(
 	  function () {

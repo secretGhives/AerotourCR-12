@@ -1,0 +1,636 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/libs/modernizr-2.0.6.min.js"></script>
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>-->
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js"><\/script>')</script>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="js/libs/selectivizr.js"></script>
+	<![endif]-->
+
+	<script defer src="js/partials/alerts.js"></script>
+	<script defer src="js/partials/buttons.js"></script>
+	<script defer src="js/partials/dropdown.js"></script>
+	<script defer src="js/partials/modal.js"></script>
+	<script defer src="js/partials/twipsy.js"></script>
+	<script defer src="js/partials/popover.js"></script>
+	<script defer src="js/partials/tabs.js"></script>
+	<script defer src="js/partials/roundabout.js"></script>
+	<script defer src="js/partials/tablesorter.js"></script>
+
+	<script defer src="js/script.js"></script>
+
+	<!-- Run a site tour --
+	<script defer src="js/partials/tour.js"></script>-->
+
+	<style type="text/css">
+	html, body {overflow: visible;}
+		.container {
+			width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+		}
+
+		/* The white background content wrapper */
+		.container > .content {
+			background: rgba(255, 255, 255,0.96);
+			padding: 20px;
+			margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+			-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+				 -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+							box-shadow: 0 1px 2px rgba(0,0,0,.15);
+		}
+
+		.content p { margin-right: 20px; }
+
+		/* Page header tweaks */
+		.page-header {
+		margin: 0 0 13px 0;
+		position: relative;
+		}
+
+		.s-btn.big {font-size: 22px; line-height: 32px;}
+
+		.ac { text-align: center;}
+		.ar { text-align: right;}
+		.clear { clear: both; }
+		.overflow { overflow: hidden; }
+
+		#social > * { vertical-align: text-bottom; }
+
+		#page-side { padding-left: 9px; border-left: 1px dashed lavender; }
+
+		.separator {
+		text-indent: -9999px;
+		display: block;
+		width: 100%;
+		border-bottom: 1px dashed lavender;
+		}
+
+
+		#page-nav {
+		display: inline-block;
+		position: absolute;
+		bottom: -19px;
+		right: 32px;
+		}
+
+		ul.menu_tabbed {
+		list-style: none;
+		border-bottom: 1px transparent solid;
+		padding-bottom: 7px
+		}	
+		ul.menu_tabbed li {
+		display: inline;
+		margin-right: 3px;
+		}	
+		ul.menu_tabbed li a {
+		color:#999999;
+		text-decoration: none;
+		background: #f7f7f7;
+		border: 1px #ddd solid;
+		border-bottom: none;
+		padding: 9px 13px;
+		border-radius: 4px 4px 0 0;
+		}	
+		ul.menu_tabbed li a.selected {
+		color:#666666;
+		background:#FFFFFF;
+		border: 1px #bbb solid;
+		border-bottom: 1px transparent solid;
+		padding: 13px 13px 9px 13px;	
+		}	
+		ul.menu_tabbed li a:hover {
+		padding: 13px 13px 9px 13px;	
+		}
+
+		.headerimg {
+		display: block;
+		height: 100%;
+		background: no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		}
+
+		#headerimgs {
+		display: block;
+		height: 420px;
+		position: relative;
+		border: 1px dotted lavender;
+		overflow: hidden;
+		}
+
+		/* HEADER TEXT */
+		#headertxt {
+		position: absolute;
+		top: 32px;
+		background: rgba(255,255,255,0.69);
+		}
+		#headernav-outer {
+		position: absolute;
+		display: inline-block;
+		bottom: 3px;
+		left: 6px;
+		}
+		#firstline { color:#333; font-size:40px; padding:4px 13px 7px; float:left; display:block; }
+		#secondline { color:#CD2B3A; text-decoration:none; font-size:60px; padding:0 13px 10px; float:left; display:block; clear:both; }
+		#secondline:hover { text-decoration:underline; color:#7F000C; }
+		.caption {line-height: 36px;}
+		.pictured { background-color:#CC3333; color:#FFF; font-size:12px; padding:9px 16px; text-transform:uppercase; float:left; display:block; clear:both; margin-top:10px; }
+		.pictured a { font-size:16px; font-style:italic; letter-spacing:0; text-transform:none; color:#FFF; text-decoration:none; }
+		.pictured a:hover { text-decoration:underline; }
+
+
+		/* Roundabout */
+		.roundabout { overflow: hidden; min-height: 20em; }
+		.roundabout li {
+				height: 10em;
+				width: 20em;
+				background-color: #ccc;
+				text-align: center;
+				cursor: pointer;
+		}
+		.roundabout span {display:blcok;}
+		.roundabout li.roundabout-in-focus { cursor: default; }
+		.roundabout li img { width: 100%; max-height: 100%; }
+
+	</style>
+
+<script>
+// Speed of the automatic slideshow
+var slideshowSpeed = 6000;
+
+// Variable to store the images we need to set as background
+// which also includes some text and url's.
+var photos = [ {
+		"title" : "Lineup",
+		"image" : "bgHome.jpg",
+		"url" : "#",
+		"firstline" : "What's your",
+		"secondline" : "flavor?"
+	}, {
+		"title" : "A350 parked",
+		"image" : "bgHome1.jpg",
+		"url" : "#",
+		"firstline" : "Still busy at",
+		"secondline" : "work?"
+	}, {
+		"title" : "R44 in flight",
+		"image" : "bgHome2.jpg",
+		"url" : "#",
+		"firstline" : "Get out and be",
+		"secondline" : "active"
+	}, {
+		"title" : "B3 overfly",
+		"image" : "bgHome3.jpg",
+		"url" : "#",
+		"firstline" : "Take a new look at",
+		"secondline" : "Costa Rica"
+	}
+];
+
+
+
+$(document).ready(function() {
+
+	$("table#sortTableExample").tablesorter({ sortList: [[1,0]] });
+		
+	// Backwards navigation
+	$("#back").click(function() {
+		stopAnimation();
+		navigate("back");
+	});
+	
+	// Forward navigation
+	$("#next").click(function() {
+		stopAnimation();
+		navigate("next");
+	});
+	
+	var interval;
+	$("#control").toggle(function(){
+		stopAnimation();
+	}, function() {
+		// Change the background image to "pause"
+		$(this).html("*");
+		
+		// Show the next image
+		navigate("next");
+		
+		// Start playing the animation
+		interval = setInterval(function() {
+			navigate("next");
+		}, slideshowSpeed);
+	});
+	
+	
+	var activeContainer = 1;	
+	var currentImg = 0;
+	var animating = false;
+	var navigate = function(direction) {
+		// Check if no animation is running. If it is, prevent the action
+		if(animating) {
+			return;
+		}
+		
+		// Check which current image we need to show
+		if(direction == "next") {
+			currentImg++;
+			if(currentImg == photos.length + 1) {
+				currentImg = 1;
+			}
+		} else {
+			currentImg--;
+			if(currentImg == 0) {
+				currentImg = photos.length;
+			}
+		}
+		
+		// Check which container we need to use
+		var currentContainer = activeContainer;
+		if(activeContainer == 1) {
+			activeContainer = 2;
+		} else {
+			activeContainer = 1;
+		}
+		
+		showImage(photos[currentImg - 1], currentContainer, activeContainer);
+		
+	};
+	
+	var currentZindex = -1;
+	var showImage = function(photoObject, currentContainer, activeContainer) {
+		animating = true;
+		
+		// Make sure the new container is always on the background
+		currentZindex--;
+		
+		// Set the background image of the new active container
+		$("#headerimg" + activeContainer).css({
+			"background" : "url(img/" + photoObject.image + ")",
+			"display" : "block",
+			"visibility" : "visible",
+			"z-index" : currentZindex
+		});
+		
+		// Hide the header text
+		$("#headertxt").css({"visibility" : "hidden"});
+		
+		// Set the new header text
+		$("#firstline").html(photoObject.firstline);
+		$("#secondline")
+			.attr("href", photoObject.url)
+			.html(photoObject.secondline);
+		$("#pictureduri")
+			.attr("href", photoObject.url)
+			.html(photoObject.title);
+		
+		
+		// Fade out the current container
+		// and display the header text when animation is complete
+		$("#headerimg" + currentContainer).fadeOut(function() {
+			setTimeout(function() {
+				$("#headertxt").css({"visibility" : "visible"});
+				animating = false;
+			}, 500);
+		});
+	};
+	
+	var stopAnimation = function() {
+		// Change the background image to "play"
+		$("#control").html("]");
+		// Clear the interval
+		clearInterval(interval);
+	};
+	
+	// We should statically set the first image
+	navigate("next");
+	
+	
+});
+</script>
+
+</head>
+
+<body id="quote-page" class="pretty">
+
+<article id="page-content" class="container">
+
+	<div class="content">
+		<div class="page-header">
+			<h1 id="page-logo"><img src="img/aerotour.png" width="202px" height="56px" /></h1>
+			<nav id="page-nav">
+				<ul class="menu_tabbed">
+					<li><a href="#" title="">Nuestra Flota</a></li>
+					<li><a href="#" title="" class="selected">Administracion</a></li>
+					<li><a href="#" title="">Ventas</a></li>
+					<li><a href="#" title="">Aquilla</a></li>
+					<li><a href="#" title="">Mantiminiento</a></li>
+				</ul><!-- /page-nav -->
+			</nav>
+		</div>
+		<section class="overflow">
+			<div class="g-three-fourths">
+
+				<div id="headerimgs">
+					<div id="headerimg1" class="headerimg"></div>
+					<div id="headerimg2" class="headerimg"></div>
+					<!-- Slideshow controls -->
+					<div id="headernav-outer">
+						<div id="headernav">
+							<button id="back" class="btn s-btn"><</button>
+							<button id="control" class="btn s-btn">]</button>
+							<button id="next" class="btn s-btn">></button>
+						</div>
+					</div>
+					<!-- jQuery handles for the text displayed on top of the images -->
+					<div id="headertxt">
+						<p class="caption">
+							<span id="firstline"></span>
+							<a href="#" id="secondline"></a>
+						</p>
+						<p class="pictured">
+							Pictured:
+							<a href="#" id="pictureduri"></a>
+						</p>
+					</div>
+				</div>
+
+				<h2>Vuele con Aerotour</h2>
+				<h5>...una expierencie unica</h5>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<div class="alert-message block-message info fade in" data-alert="alert">
+					<a class="close" href="#">×</a>
+					<p><strong>Oh snap! You got an info!</strong> Wanna do this and that and again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+					<div class="alert-actions">
+						<a class="btn small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
+					</div>
+				</div>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation <span class="label success">New</span> ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<ul rel="roundabout" class="unstyled roundabout">
+					<li><img src="img/field.jpg" alt="Award" /></li>
+					<li><img src="img/bbp.jpg" alt="Backpack" /></li>
+					<li><img src="img/lake.jpg" alt="Bear" /></li>
+					<li><img src="img/gun.png" alt="Gun" /></li>
+					<li><img src="img/high-five.png" alt="High-Five" /></li>
+					<li><img src="img/mustache.png" alt="Mustache" /></li>
+					<li><img src="img/sun.png" alt="Sun" /></li>
+				</ul>
+
+				<p><span class="label notice">Notice</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<ul class="tabs" data-tabs="tabs">
+					<li class="active"><a href="#heli">Helicopteros</a></li>
+					<li><a href="#planes">Aeronaves</a></li>
+					<li><a href="#mopeds">Mopeds</a></li>
+					<li class="dropdown" data-dropdown="dropdown">
+						<a href="#" class="dropdown-toggle">Dropdown</a>
+						<ul class="dropdown-menu">
+							<li><a href="#more">@more</a></li>
+							<li><a href="#other">@other</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<div id="my-tab-content" class="tab-content">
+					<div class="active tab-pane" id="heli">
+						<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, <span class="label warning">Warning</span> carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+
+						<ul rel="roundabout" class="roundabout unstyled">
+							<li><span>Block 1</span></li>
+							<li><span>Block 2</span></li>
+							<li><span>Block 3</span></li>
+							<li><span>Block 4</span></li>
+							<li><span>Block 5</span></li>
+							<li><span>Block 6</span></li>
+						</ul>
+
+						<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt <span class="label important">Important</span> stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+					</div>
+
+					<div class="tab-pane" id="planes">
+						<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+
+						<table class="zebra-striped" id="sortTableExample">
+							<thead>
+								<tr>
+									<th class="header">#</th>
+									<th class="yellow header headerSortDown">First Name</th>
+									<th class="blue header">Last Name</th>
+									<th class="green header">Language</th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr>
+									<td>2</td>
+									<td>Joe</td>
+									<td>Sixpack</td>
+									<td>English</td>
+								</tr><tr>
+									<td>3</td>
+									<td>Stu</td>
+									<td>Dent</td>
+									<td>Code</td>
+								</tr><tr>
+									<td>1</td>
+									<td>Your</td>
+									<td>One</td>
+									<td>English</td>
+								</tr></tbody>
+						</table>
+					</div>
+
+					<div class="tab-pane" id="mopeds">
+						<p>Banksy do proident, brooklyn photo booth delectus sunt artisan sed organic exercitation eiusmod four loko. Quis tattooed iphone esse aliqua. Master cleanse vero fixie mcsweeney's. Ethical portland aute, irony food truck pitchfork lomo eu anim. Aesthetic blog DIY, ethical beard leggings tofu consequat whatever cardigan nostrud. Helvetica you probably haven't heard of them carles, marfa veniam occaecat lomo before they sold out in shoreditch scenester sustainable thundercats. Consectetur tofu craft beer, mollit brunch fap echo park pitchfork mustache dolor.</p>
+					</div>
+
+					<div class="tab-pane" id="more">
+						<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+					</div>
+
+					<div class="tab-pane" id="other">
+						<p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+					</div>
+				</div>
+
+				<form action="page_submit" method="post" accept-charset="utf-8">
+				<fieldset>
+					<div class="clearfix">
+						<label for="prependedInput">Nombre</label>
+						<div class="input">
+							<div class="input-prepend">
+								<span class="add-on">N</span>
+								<input class="large" id="prependedInput" name="prependedInput" size="16" type="text" />
+							</div>
+							<span class="help-block">Here's some help text</span>
+						</div>
+					</div><!-- /clearfix -->
+					<div class="clearfix">
+						<label for="prependedInput">Email</label>
+						<div class="input">
+							<div class="input-prepend">
+								<span class="add-on">@</span>
+								<input class="large" id="prependedInput" name="prependedInput" size="16" type="text" />
+							</div>
+							<span class="help-block">Here's some help text</span>
+						</div>
+					</div><!-- /clearfix -->
+					<div class="clearfix">
+						<label for="prependedInput">Telefono</label>
+						<div class="input">
+							<div class="input-prepend">
+								<span class="add-on">T</span>
+								<input class="medium" id="prependedInput" name="prependedInput" size="16" type="tel" />
+							</div>
+							<span class="help-block">Here's some help text</span>
+						</div>
+					</div><!-- /clearfix -->
+
+					<div class="clearfix">
+						<label for="prependedInput">Pasajeros</label>
+						<div class="input">
+							<div class="input-prepend">
+								<span class="add-on">#</span>
+								<input class="small" id="prependedInput" name="prependedInput" size="6" type="number" />
+							</div>
+							<span class="help-block">Here's some help text</span>
+						</div>
+					</div><!-- /clearfix -->
+
+					<div class="clearfix">
+						<label for="textarea">Commentarios</label>
+						<div class="input">
+							<textarea class="span7" id="textarea2" name="textarea2" rows="3"></textarea>
+							<span class="help-block">
+								Block of help text to describe the field above if need be.
+							</span>
+						</div>
+					</div><!-- /clearfix -->
+
+					<div class="actions">
+						<input type="submit" class="btn primary" value="Enviar">
+					</div>
+				</fieldset>
+				</form>
+			</div>
+
+
+			<div id="page-side" class="g-fourth">
+				<div id="social" class="ar">
+
+					<a href="#" id="link-fb" class="s-btn big">f</a>
+					<a href="#" id="link-gp" class="s-btn big">g</a>
+					<a href="#" id="link-li" class="s-btn big">l</a>
+					<a href="#" id="link-yt" class="s-btn big">y</a>
+					<a href="#" id="link-sy" class="s-btn big">s</a>
+
+				</div>
+
+				<span class="separator">---</span>
+
+				<address>
+					<h3>Aerotour S.R.L.</h3>
+					<tel>+506 2232-1248</tel>
+					<tel>+506 2232-0660</tel>
+					<a href="mailto:mercadeo@aerotourcr.com">mercadeo@aerotourcr</a>
+					San Jose, Costa Rica<br />
+					Aeropuerto Int. Tobias Bolanos<br />
+					Hangar 26<br /><br />
+					<button data-controls-modal="modal-from-dom" data-backdrop="true" data-keyboard="true" class="btn">Mapa »</button>
+				</address>
+
+				<span class="separator">---</span>
+
+				<div>
+					<h3>Servicios</h3>
+					<ul class="">
+						<li>Viajes Ejecutivos</li>
+						<li>Tours Aereos</li>
+						<li>Carga Externa</li>
+						<li>Publicidad Aerea</li>
+						<li>Translados Medicos</li>
+						<li>Filmacion y Fotografia</li>
+						<li>Lidar Planning</li>
+						<li>Topografia y mapeo</li>
+						<li>Construccion de helipuertos</li>
+					</ul><!-- / -->
+				</div>
+
+				<span class="separator">---</span>
+
+				<div>
+					<h3>Media Center</h3>
+					<p>Vea video, fotografias, y articulos relacionados con Aerotour</p>
+					<p><a class="btn" href="#">Vea »</a></p>
+				</div>
+
+				<span class="separator">---</span>
+
+				<div>
+					<img src="img/aensa-logo.png" width="174px" height="auto" rel="pop" title="Aprendir volar" data-placement="left" data-content="Aprentde como volar like a champ!" />
+				</div>
+
+			</div>
+
+			<aside class="clear ac">
+			<img class="sponsors" src="img/hai.png" alt="Member of Heliocpter Association International"/>
+			<img class="sponsors" src="img/canatur.png" alt="Member of Canatur"/>
+			<img class="sponsors" src="img/robinson.png" alt="Authorized Robinson Helicopter Dealer"/>
+			<img class="sponsors" src="img/amigos.png" alt="Member of AMIGOS Association"/>
+			</aside>
+
+		</section>
+	</div>
+
+<!-- Map modal screen -->
+<div id="modal-from-dom" class="modal hide fade">
+	<div class="modal-header">
+		<a href="#" class="close">×</a>
+		<h3>Locate us</h3>
+	</div>
+	<div class="modal-body">
+		<div id="map">
+			<br/>Actual map will go here, maybe
+			<br /><small><a href="http://www.google.com/maps?q=aerotour&amp;hl=en&amp;ie=UTF8&amp;view=map&amp;cid=2902145994640288262&amp;hq=aerotour&amp;hnear=&amp;ll=9.958741,-84.140993&amp;spn=0.006295,0.006295&amp;t=m&amp;vpsrc=0&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+		</div>
+	</div>
+</div>
+
+</article><!-- /site-content -->
+
+
+</body>
+</html>
