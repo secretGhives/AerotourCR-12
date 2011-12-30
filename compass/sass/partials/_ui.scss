@@ -7,137 +7,226 @@ html, body {
 	overflow: hidden;
 	body {
 		@include typeface;
-		background: #efefef url(../img/bgHome3.jpg) no-repeat center center fixed; 
+		// background: #efefef url(../img/bgHome3.jpg) no-repeat center center fixed; 
+		// -webkit-background-size: cover;
+		// -moz-background-size: cover;
+		// -o-background-size: cover;
+		// background-size: cover;
+	}
+}
+
+.home, .home1, .home2, .home3 {
+
+	#site-content {
+		position: relative;
+		height: 100%;
+
+		&.container {
+			//background: rgba(255, 255, 255,0.42);
+			//background: rgba(0, 0, 0, 0.13);
+			//@include box-shadow(0 0 20px black);
+			width: 100%;
+		}
+
+	}	
+
+}
+
+
+body.page {
+		overflow: visible;
+		background: #efefef url(../img/bgHome.jpg) no-repeat center center fixed; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
-	}
 }
+.page {
 
-#site-content {
+	.page-header {
+	margin: 0 0 13px 0;
 	position: relative;
-	height: 100%;
+	}
 
-	&.container {
+	#page-nav {
+	display: inline-block;
+	position: absolute;
+	bottom: -19px;
+	right: 32px;
+	}
+
+	#social > * { vertical-align: text-bottom; }
+	#page-side { padding-left: 9px; border-left: 1px dashed lavender; }
+
+	.container {
 		background: rgba(255, 255, 255,0.42);
 		//background: rgba(0, 0, 0, 0.13);
-		@include box-shadow(0 0 20px black);
-		width: 100%;
+		width: 820px;
+
+		.content {
+			background: rgba(255, 255, 255,0.96);
+			padding: 20px;
+			margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+			-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+				 -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+							box-shadow: 0 1px 2px rgba(0,0,0,.15);
+			p { margin-right: 20px; }
+		}
+
 	}
+
 
 }
-
-#site-logo {
-	position: absolute;
-	top: 77px;
-	left: 282px;
-
-	z-index: 1; 
-	display: block;
-	img {
-		width: 290px;
-		height: 80px;
-	}
-	margin: 0;
-	padding: 0;
-
-	// background: url(../img/aerotour.png) no-repeat center center fixed;
-	// -webkit-background-size: contain;
-	// -moz-background-size: contain;
-	// -o-background-size: contain;
-	// background-size: contain;
-}
-
-#safetyAward {
-	position: absolute;
-	right: 154px;
-	bottom: 81px;
-
-	z-index: 1;
-	display: block;
-	img {
-		width: 146px;
-		height: 129px;
-	}
-
-	// background: url(../img/SafetyAward.png) no-repeat center center fixed; 
-	// -webkit-background-size: cover;
-	// -moz-background-size: cover;
-	// -o-background-size: cover;
-	// background-size: cover;
-}
-
-.sec-nav {
-	@extend .unselectable;
-	position: absolute;
-	width: 100%;
-
-	h1 {
-		display: inline-block;
-		color: #fff;
-		// text-shadow: 0 1px 0 #ccc, 
-		// 						 0 2px 0 #c9c9c9, 
-		// 						 0 3px 0 #bbb, 
-		// 						 0 4px 0 #b9b9b9, 
-		// 						 0 5px 0 #aaa, 
-		// 						 0 6px 1px rgba(0,0,0,.1), 
-		// 						 0 0 3px rgba(0,0,0,.1), 
-		// 						 0 1px 3px rgba(0,0,0,.3), 
-		// 						 0 3px 3px rgba(0,0,0,.2), 
-		// 						 0 3px 6px rgba(0,0,0,.25), 
-		// 						 0 6px 6px rgba(0,0,0,.2), 
-		// 						 0 13px 13px rgba(0,0,0,.15);
-		font-size: 32px;
-		font-weight: normal;
-		margin-left: 32px;
-		margin-bottom: 0;
-	}
-	nav {
-		margin: 0;
-		padding: 0;
-		position: absolute;
-		width: 100%;
-
-		&:hover { 
-			background: rgba(255,255,255,0.32);
-			a { color: #333; text-shadow: 0 0 0 #fff; }
-		}
-		&.active {
-			background: rgba(255,255,255,0.81);
-			a { color: #000; text-shadow: 0 0 0 #fff; }
-		}
-		a {
-			color: #fff;
-			@include text-shadow(0 1px 0 rgba(0,0,0,.3));
-			font-size: 17px;
-			line-height: normal;
-			vertical-align: top;
-			margin-left: 42px;
-		}
-		.info {
-			display: none;
-			position: absolute;
-			right: 69px;
-			font-size: 14px;
-			width: 420px;
-			padding: 0 9px 9px 9px;
-			color: #333;
-			background: rgba(255,255,255,0.81);
-			z-index: 4;
-			//@extend .fade;
-			//&.in { display: inline-block; }
-		}
-	}
-}
-#nav-home, #nav-admin {top: 33px;}
-#nav-fleet, #nav-sales {top: 54px;}
-#nav-lease {top:75px;}
-#nav-maintance {top:96px;}
-
-#inair {top: 55px; z-index: 3;}
-#onground {top: 150px; z-index: 2;}
-
-
-
+ 
 /* @end */
+
+
+/* HOME Individual landing pages */
+body.home { background: #efefef url(../img/bgHome.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.home {
+	#site-logo { position: absolute; top: 99px; left: 413px; z-index: 1; display: block; margin: 0; padding: 0; }
+	#site-logo img { width: 290px; height: 80px; }
+	#safetyAward { position: absolute; right: 22px; top: 11px; z-index: 1; display: block; }
+	#safetyAward img { width: 146px; height: 129px; }
+	.sec-nav { position: absolute; width: 100%; }
+	.sec-nav h1 { display: inline-block; color: #fff; font-size: 32px; font-weight: normal; margin-left: 32px; margin-bottom: 0; }
+	.sec-nav nav { margin: 0; padding: 0; position: absolute; width: 100%; }
+	.sec-nav nav:hover { background: rgba(255, 255, 255, 0.32); }
+	.sec-nav nav:hover a { color: #333; text-shadow: 0 0 0 #fff; }
+	.sec-nav nav.active { background: rgba(255, 255, 255, 0.81); }
+	.sec-nav nav.active a { color: #000; text-shadow: 0 0 0 #fff; }
+	.sec-nav nav a { color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); font-size: 17px; line-height: normal; vertical-align: top; margin-left: 42px; }
+	.sec-nav nav .info { display: none; position: absolute; right: 69px; font-size: 14px; width: 420px; padding: 0 9px 9px 9px; color: #333; background: rgba(255, 255, 255, 0.81); z-index: 4; }
+	#nav-home, #nav-admin { top: 33px; }
+	#nav-fleet, #nav-sales { top: 54px; }
+	#nav-lease { top: 75px; }
+	#nav-maintance { top: 96px; }
+	#inair { top: 55px; z-index: 3; }
+	#onground { top: 150px; z-index: 2; }
+}
+
+/* HOME1 landing page */
+body.home1 { background: #efefef url(../img/bgHome1.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.home1 {
+	#site-logo { position: absolute; bottom: 53px; right: 146px; z-index: 1; display: block; margin: 0; padding: 0; }
+	#site-logo img { width: 290px; height: 80px; }
+	#safetyAward { position: absolute; right: 108px; top: 94px; z-index: 1; display: block; }
+	#safetyAward img { width: 146px; height: 129px; }
+	.sec-nav { position: absolute; width: 100%; }
+	.sec-nav h1 { display: inline-block; color: #333; font-size: 32px; font-weight: normal; margin-left: 32px; margin-bottom: 0; }
+	.sec-nav nav { margin: 0; padding: 0; position: absolute; width: 100%; }
+	.sec-nav nav:hover { background: rgba(255, 255, 255, 0.32); }
+	.sec-nav nav:hover a { color: #333; text-shadow: 0 0 0 #fff; }
+	.sec-nav nav.active { background: rgba(255, 255, 255, 0.81); }
+	.sec-nav nav.active a { color: #000; text-shadow: 0 0 0 #fff; }
+	.sec-nav nav a { color: #000; font-size: 17px; line-height: normal; vertical-align: top; margin-left: 42px; }
+	.sec-nav nav .info { display: none; position: absolute; right: 69px; font-size: 14px; width: 420px; padding: 0 9px 9px 9px; color: #333; background: rgba(255, 255, 255, 0.81); z-index: 4; }
+	#nav-home, #nav-admin { top: 33px; }
+	#nav-fleet, #nav-sales { top: 54px; }
+	#nav-lease { top: 75px; }
+	#nav-maintance { top: 96px; }
+	#inair { top: 55px; z-index: 3; }
+	#onground { top: 150px; z-index: 2; }
+}
+
+
+/* HOME2 landing page */
+body.home2 { background: #efefef url(../img/bgHome2.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.home2 {
+	#site-logo { position: absolute; top: 24px; right: 47px; z-index: 1; display: block; margin: 0; padding: 0; }
+	#site-logo img { width: 290px; height: 80px; }
+	#safetyAward { position: absolute; right: 154px; bottom: 81px; z-index: 1; display: block; }
+	#safetyAward img { width: 146px; height: 129px; }
+	.sec-nav { position: absolute; width: 100%; }
+	.sec-nav h1 { display: inline-block; color: #666; font-size: 32px; font-weight: normal; margin-left: 32px; margin-bottom: 0; }
+	.sec-nav nav { margin: 0; padding: 0; position: absolute; width: 100%; }
+	.sec-nav nav:hover { background: rgba(255, 255, 255, 0.32); }
+	.sec-nav nav:hover a { color: #333; text-shadow: 0 0 0 #fff; }
+	.sec-nav nav.active { background: rgba(255, 255, 255, 0.81); }
+	.sec-nav nav.active a { color: #000; text-shadow: 0 0 0 #fff; }
+	.sec-nav nav a { color: #333; text-shadow: 0 0px 0 rgba(0, 0, 0, 0.3); font-size: 17px; line-height: normal; vertical-align: top; margin-left: 42px; }
+	.sec-nav nav .info { display: none; position: absolute; right: 69px; bottom: 12px; font-size: 14px; width: 420px; padding: 0 9px 9px 9px; color: #333; background: rgba(255, 255, 255, 0.81); z-index: 4; }
+	#nav-home, #nav-admin { top: 33px; }
+	#nav-fleet, #nav-sales { top: 54px; }
+	#nav-lease { top: 75px; }
+	#nav-maintance { top: 96px; }
+	#inair { top: 160px; z-index: 3; }
+	#onground { top: 260px; z-index: 2; }
+}
+
+
+/* HOME3 landing page */
+body.home3 { background: #efefef url(../img/bgHome3.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.home3 {
+	#site-logo { position: absolute; top: 77px; left: 282px; z-index: 1; display: block; margin: 0; padding: 0; }
+	#site-logo img { width: 290px; height: 80px; }
+	#safetyAward { position: absolute; right: 154px; bottom: 81px; z-index: 1; display: block; }
+	#safetyAward img { width: 146px; height: 129px; }
+	.sec-nav { position: absolute; width: 100%; }
+	.sec-nav h1 { display: inline-block; color: #fff; font-size: 32px; font-weight: normal; margin-left: 32px; margin-bottom: 0; }
+	.sec-nav nav { margin: 0; padding: 0; position: absolute; width: 100%; }
+	.sec-nav nav:hover { background: rgba(255, 255, 255, 0.32); }
+	.sec-nav nav:hover a { color: #333; text-shadow: 0 0 0 #fff; }
+	.sec-nav nav.active { background: rgba(255, 255, 255, 0.81); }
+	.sec-nav nav.active a { color: #000; text-shadow: 0 0 0 #fff; }
+	.sec-nav nav a { color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); font-size: 17px; line-height: normal; vertical-align: top; margin-left: 42px; }
+	.sec-nav nav .info { display: none; position: absolute; right: 69px; font-size: 14px; width: 420px; padding: 0 9px 9px 9px; color: #333; background: rgba(255, 255, 255, 0.81); z-index: 4; }
+	#nav-home, #nav-admin { top: 33px; }
+	#nav-fleet, #nav-sales { top: 54px; }
+	#nav-lease { top: 75px; }
+	#nav-maintance { top: 96px; }
+	#inair { top: 55px; z-index: 3; }
+	#onground { top: 150px; z-index: 2; }
+}
+
+
+
+/* Image Gallery */
+.headerimg {
+display: block;
+height: 100%;
+background: no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+#headerimgs {
+display: block;
+height: 420px;
+position: relative;
+border: 1px dotted lavender;
+overflow: hidden;
+}
+#headertxt {
+position: absolute;
+top: 32px;
+background: rgba(255,255,255,0.69);
+}
+#headernav-outer {
+position: absolute;
+display: inline-block;
+bottom: 3px;
+left: 6px;
+}
+#firstline { color:#333; font-size:40px; padding:4px 13px 7px; float:left; display:block; }
+#secondline { color:#CD2B3A; text-decoration:none; font-size:60px; padding:0 13px 10px; float:left; display:block; clear:both; }
+#secondline:hover { text-decoration:underline; color:#7F000C; }
+.caption {line-height: 36px;}
+.pictured { background-color:#CC3333; color:#FFF; font-size:12px; padding:9px 16px; text-transform:uppercase; float:left; display:block; clear:both; margin-top:10px; }
+.pictured a { font-size:16px; font-style:italic; letter-spacing:0; text-transform:none; color:#FFF; text-decoration:none; }
+.pictured a:hover { text-decoration:underline; }
+
+
+/* Roundabout */
+.roundabout { overflow: hidden; min-height: 20em; }
+.roundabout li {
+		height: 10em;
+		width: 20em;
+		background-color: #ccc;
+		text-align: center;
+		cursor: pointer;
+}
+.roundabout span {display:blcok;}
+.roundabout li.roundabout-in-focus { cursor: default; }
+.roundabout li img { width: 100%; max-height: 100%; }

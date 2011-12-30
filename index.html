@@ -22,19 +22,22 @@
 		<script type="text/javascript" src="js/libs/selectivizr.js"></script>
 	<![endif]-->
 
-	<script defer src="js/partials/alerts.js"></script>
-	<script defer src="js/partials/buttons.js"></script>
-	<script defer src="js/partials/dropdown.js"></script>
-	<script defer src="js/partials/modal.js"></script>
-	<script defer src="js/partials/twipsy.js"></script>
-	<script defer src="js/partials/popover.js"></script>
-	<script defer src="js/partials/tabs.js"></script>
+
+<script>
+var pages = ['home', 'home1', 'home2', 'home3'];
+
+$(function() {
+	$("body").addClass(pages[Math.floor(Math.random() * pages.length)]);
+});
+
+
+
+</script>
 
 	<script defer src="js/script.js"></script>
 
 	<!-- Run a site tour --
 	<script defer src="js/partials/tour.js"></script>-->
-
 </head>
 
 <body id="front-page" class="pretty">
@@ -53,9 +56,9 @@
 			<p class="info">
 			Contactenos 24 horas al dia, 365 dias al ano, podemos llevarlo a cualquier destino de nuestro pais.
 			<br/><br/>
-			<button class="btn primary">Ir a esta seccion</button>
-			<button class="btn primary">Cotizacion</button>
-			<button class="btn primary">Destinos</button>
+			<button class="btn primary" onclick="window.location='fly.html'">Ir a esta seccion</button>
+			<button class="btn primary" onclick="window.location='fly.html#quote'">Cotizacion</button>
+			<button class="btn primary" onclick="window.location='page.html#destinations'">Destinos</button>
 			</p>
 		</nav>
 
@@ -64,7 +67,7 @@
 			<p class="info">
 			Con nuestra flota helicopters usted podra viajar seguro y rapido a cualquier destino.  Contamos con aeronaves de diferentes capacidades.
 			<br/><br/>
-			<button class="btn primary">Flota</button>
+			<button class="btn primary" onclick="window.location='fleet.html'">Flota</button>
 			</p>
 		</nav>
 
@@ -79,7 +82,7 @@
 			<p class="info">
 			En Aerotour, nuestra finalidad es darle la plena expericiencia de opracion y administracion de helicopteros privados, poniendo atencion a todas las tareas escenciales con losmayores estandares internacionales de seguridad y matinimiento.
 			<br/><br/>
-			<button class="btn primary">Ir a esta seccion</button>
+			<button class="btn primary" onclick="window.location='administration.html'">Ir a esta seccion</button>
 			</p>
 		</nav>
 
@@ -88,7 +91,7 @@
 			<p class="info">
 			Con nuestra asesoria, experiencia y guia estamos seguros que tamara las descisiones correctas para elegir la aeronave adecuada y asi disfrutar de los beneficios que existen de tener una aeronave privada.
 			<br/><br/>
-			<button class="btn primary">Ir a esta seccion</button>
+			<button class="btn primary" onclick="window.location='sales.html'">Ir a esta seccion</button>
 			</p>
 		</nav>
 
@@ -97,7 +100,7 @@
 			<p class="info">
 			Contar con un helicoptero a toda hora puede ser una realidad con nuestro programa de Aquilla, con el cual con tarifas especiales usted podra estar en cualquier lugar de Costa Rica en minutos.
 			<br/><br/>
-			<button class="btn primary">Ir a esta seccion</button>
+			<button class="btn primary" onclick="window.location='lease.html'">Ir a esta seccion</button>
 			</p>
 		</nav>
 
@@ -106,7 +109,7 @@
 			<p class="info">
 			Nuestro programa de mantenimiento no solo esta certificado internationalmente por los mismos fabricantes de las aeronaves, sino que el equipo humano esta actualizado con las ultimas nejoras en mantemiento para garantizarle asi un viaje seguro.  Brindamos servicios privados de mantenimiento.
 			<br/><br/>
-			<button class="btn primary">Ir a esta seccion</button>
+			<button class="btn primary" onclick="window.location='maintance.html'">Ir a esta seccion</button>
 			</p>
 		</nav>
 

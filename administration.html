@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title></title>
+	<title>Administracion</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -23,15 +23,12 @@
 	<![endif]-->
 
 	<script defer src="js/partials/alerts.js"></script>
-	<script defer src="js/partials/buttons.js"></script>
-	<script defer src="js/partials/dropdown.js"></script>
 	<script defer src="js/partials/modal.js"></script>
 	<script defer src="js/partials/twipsy.js"></script>
 	<script defer src="js/partials/popover.js"></script>
 	<script defer src="js/partials/tabs.js"></script>
 	<script defer src="js/partials/roundabout.js"></script>
 	<script defer src="js/partials/tablesorter.js"></script>
-	<script defer src="js/partials/imgallery.js"></script>
 
 	<script defer src="js/script.js"></script>
 
@@ -44,7 +41,7 @@
 
 </head>
 
-<body id="quote-page" class="pretty page">
+<body id="administration-page" class="pretty page">
 
 <article id="page-content" class="container">
 
@@ -54,8 +51,8 @@
 			<nav id="page-nav">
 				<ul class="menu_tabbed">
 					<li><a href="fly.html" title="">Volar</a></li>
-					<li><a href="fleet.html" title="" class="selected">Flota</a></li>
-					<li><a href="administration.html" title="">Administracion</a></li>
+					<li><a href="fleet.html" title="">Flota</a></li>
+					<li><a href="administration.html" title="" class="selected">Administracion</a></li>
 					<li><a href="sales.html" title="">Ventas</a></li>
 					<li><a href="lease.html" title="">Aquilla</a></li>
 					<li><a href="maintance.html" title="">Mantiminiento</a></li>
@@ -65,39 +62,7 @@
 		<section class="overflow">
 			<div class="g-three-fourths">
 
-				<div id="headerimgs">
-					<div id="headerimg1" class="headerimg"></div>
-					<div id="headerimg2" class="headerimg"></div>
-					<!-- Slideshow controls -->
-					<div id="headernav-outer">
-						<div id="headernav">
-							<button id="back" class="btn s-btn"><</button>
-							<button id="control" class="btn s-btn">]</button>
-							<button id="next" class="btn s-btn">></button>
-						</div>
-					</div>
-					<!-- jQuery handles for the text displayed on top of the images -->
-					<div id="headertxt">
-						<p class="caption">
-							<span id="firstline"></span>
-							<a href="#" id="secondline"></a>
-						</p>
-						<p class="pictured">
-							Pictured:
-							<a href="#" id="pictureduri"></a>
-						</p>
-					</div>
-				</div>
-
-				<h2>Vuele con Aerotour</h2>
-				<h5>...una expierencie unica</h5>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h2>Administracion con Aerotour</h2>
 
 				<div class="alert-message block-message info fade in" data-alert="alert">
 					<a class="close" href="#">×</a>
@@ -107,45 +72,14 @@
 					</div>
 				</div>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation <span class="label success">New</span> ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-				<ul rel="roundabout" class="unstyled roundabout">
-					<li><img src="img/field.jpg" alt="Award" /></li>
-					<li><img src="img/bbp.jpg" alt="Backpack" /></li>
-					<li><img src="img/lake.jpg" alt="Bear" /></li>
-					<li><img src="img/gun.png" alt="Gun" /></li>
-					<li><img src="img/high-five.png" alt="High-Five" /></li>
-					<li><img src="img/mustache.png" alt="Mustache" /></li>
-					<li><img src="img/sun.png" alt="Sun" /></li>
-				</ul>
-
-				<p><span class="label notice">Notice</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
 				<ul class="tabs" data-tabs="tabs">
-					<li class="active"><a href="#heli">Helicopteros</a></li>
-					<li><a href="#planes">Aeronaves</a></li>
-					<li><a href="#mopeds">Mopeds</a></li>
-					<li class="dropdown" data-dropdown="dropdown">
-						<a href="#" class="dropdown-toggle">Dropdown</a>
-						<ul class="dropdown-menu">
-							<li><a href="#more">@more</a></li>
-							<li><a href="#other">@other</a></li>
-						</ul>
-					</li>
+					<li class="active"><a href="#full">Full Cover</a></li>
+					<li><a href="#parking">Just Parking</a></li>
+					<li><a href="#wash">Wash Servicios</a></li>
 				</ul>
 
 				<div id="my-tab-content" class="tab-content">
-					<div class="active tab-pane" id="heli">
+					<div class="active tab-pane" id="full">
 						<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, <span class="label warning">Warning</span> carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
 
 						<ul rel="roundabout" class="roundabout unstyled">
@@ -160,7 +94,7 @@
 						<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt <span class="label important">Important</span> stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
 					</div>
 
-					<div class="tab-pane" id="planes">
+					<div class="tab-pane" id="parking">
 						<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
 
 						<table class="zebra-striped" id="sortTableExample">
@@ -192,78 +126,17 @@
 						</table>
 					</div>
 
-					<div class="tab-pane" id="mopeds">
+					<div class="tab-pane" id="wash">
 						<p>Banksy do proident, brooklyn photo booth delectus sunt artisan sed organic exercitation eiusmod four loko. Quis tattooed iphone esse aliqua. Master cleanse vero fixie mcsweeney's. Ethical portland aute, irony food truck pitchfork lomo eu anim. Aesthetic blog DIY, ethical beard leggings tofu consequat whatever cardigan nostrud. Helvetica you probably haven't heard of them carles, marfa veniam occaecat lomo before they sold out in shoreditch scenester sustainable thundercats. Consectetur tofu craft beer, mollit brunch fap echo park pitchfork mustache dolor.</p>
-					</div>
 
-					<div class="tab-pane" id="more">
-						<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
-					</div>
-
-					<div class="tab-pane" id="other">
-						<p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation <span class="label success">New</span> ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 				</div>
-
-				<form action="page_submit" method="post" accept-charset="utf-8">
-				<fieldset>
-					<div class="clearfix">
-						<label for="prependedInput">Nombre</label>
-						<div class="input">
-							<div class="input-prepend">
-								<span class="add-on">N</span>
-								<input class="large" id="prependedInput" name="prependedInput" size="16" type="text" />
-							</div>
-							<span class="help-block">Here's some help text</span>
-						</div>
-					</div><!-- /clearfix -->
-					<div class="clearfix">
-						<label for="prependedInput">Email</label>
-						<div class="input">
-							<div class="input-prepend">
-								<span class="add-on">@</span>
-								<input class="large" id="prependedInput" name="prependedInput" size="16" type="text" />
-							</div>
-							<span class="help-block">Here's some help text</span>
-						</div>
-					</div><!-- /clearfix -->
-					<div class="clearfix">
-						<label for="prependedInput">Telefono</label>
-						<div class="input">
-							<div class="input-prepend">
-								<span class="add-on">T</span>
-								<input class="medium" id="prependedInput" name="prependedInput" size="16" type="tel" />
-							</div>
-							<span class="help-block">Here's some help text</span>
-						</div>
-					</div><!-- /clearfix -->
-
-					<div class="clearfix">
-						<label for="prependedInput">Pasajeros</label>
-						<div class="input">
-							<div class="input-prepend">
-								<span class="add-on">#</span>
-								<input class="small" id="prependedInput" name="prependedInput" size="6" type="number" />
-							</div>
-							<span class="help-block">Here's some help text</span>
-						</div>
-					</div><!-- /clearfix -->
-
-					<div class="clearfix">
-						<label for="textarea">Commentarios</label>
-						<div class="input">
-							<textarea class="span7" id="textarea2" name="textarea2" rows="3"></textarea>
-							<span class="help-block">
-								Block of help text to describe the field above if need be.
-							</span>
-						</div>
-					</div><!-- /clearfix -->
-
-					<div class="actions">
-						<input type="submit" class="btn primary" value="Enviar">
-					</div>
-				</fieldset>
-				</form>
 			</div>
 
 
