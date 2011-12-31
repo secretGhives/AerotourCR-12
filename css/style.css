@@ -588,18 +588,20 @@ body.page { overflow: visible; background: #efefef url(../img/bgHome.jpg) no-rep
 .page .container { background: rgba(255, 255, 255, 0.42); width: 820px; }
 .page .container .content { background: rgba(255, 255, 255, 0.96); padding: 20px; margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */ -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); }
 .page .container .content p { margin-right: 20px; }
+.page .container .content figure { margin: 0; }
+.page .container .content figure figcaption { color: #999; font-size: 80%; }
 
 /* @end */
 /* HOME Individual landing pages */
 body.home { background: #efefef url(../img/bgHome.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.home #site-logo { position: absolute; top: 99px; left: 413px; z-index: 1; display: block; margin: 0; padding: 0; }
+.home #site-logo { position: absolute; top: 19%; left: 42%; z-index: 1; display: block; margin: 0; padding: 0; }
 .home #site-logo img { width: 290px; height: 80px; }
-.home #safetyAward { position: absolute; right: 22px; top: 11px; z-index: 1; display: block; }
+.home #safetyAward { position: absolute; right: 2%; top: 1%; z-index: 1; display: block; }
 .home #safetyAward img { width: 146px; height: 129px; }
 .home .sec-nav { position: absolute; width: 100%; }
 .home .sec-nav h1 { display: inline-block; color: #fff; font-size: 32px; font-weight: normal; margin-left: 32px; margin-bottom: 0; }
-.home .sec-nav nav { margin: 0; padding: 0; position: absolute; width: 100%; }
+.home .sec-nav nav { margin: 0; padding: 0; position: absolute; width: 100%; background: rgba(0, 0, 0, 0.13); }
 .home .sec-nav nav:hover { background: rgba(255, 255, 255, 0.32); }
 .home .sec-nav nav:hover a { color: #333; text-shadow: 0 0 0 #fff; }
 .home .sec-nav nav.active { background: rgba(255, 255, 255, 0.81); }
@@ -610,38 +612,38 @@ body.home { background: #efefef url(../img/bgHome.jpg) no-repeat center center f
 .home #nav-fleet, .home #nav-sales { top: 54px; }
 .home #nav-lease { top: 75px; }
 .home #nav-maintance { top: 96px; }
-.home #inair { top: 55px; z-index: 3; }
-.home #onground { top: 150px; z-index: 2; }
+.home #inair { top: 3%; z-index: 3; }
+.home #onground { top: 22%; z-index: 2; }
 
 /* HOME1 landing page */
 body.home1 { background: #efefef url(../img/bgHome1.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.home1 #site-logo { position: absolute; bottom: 53px; right: 146px; z-index: 1; display: block; margin: 0; padding: 0; }
+.home1 #site-logo { position: absolute; bottom: 21%; right: 12%; z-index: 1; display: block; margin: 0; padding: 0; }
 .home1 #site-logo img { width: 290px; height: 80px; }
-.home1 #safetyAward { position: absolute; right: 108px; top: 94px; z-index: 1; display: block; }
+.home1 #safetyAward { position: absolute; right: 9%; top: 22%; z-index: 1; display: block; }
 .home1 #safetyAward img { width: 146px; height: 129px; }
 .home1 .sec-nav { position: absolute; width: 100%; }
-.home1 .sec-nav h1 { display: inline-block; color: #333; font-size: 32px; font-weight: normal; margin-left: 32px; margin-bottom: 0; }
+.home1 .sec-nav h1 { display: inline-block; color: #333; font-size: 32px; font-weight: normal; margin-left: 9%; margin-bottom: 0; }
 .home1 .sec-nav nav { margin: 0; padding: 0; position: absolute; width: 100%; }
 .home1 .sec-nav nav:hover { background: rgba(255, 255, 255, 0.32); }
 .home1 .sec-nav nav:hover a { color: #333; text-shadow: 0 0 0 #fff; }
 .home1 .sec-nav nav.active { background: rgba(255, 255, 255, 0.81); }
 .home1 .sec-nav nav.active a { color: #000; text-shadow: 0 0 0 #fff; }
-.home1 .sec-nav nav a { color: #000; font-size: 17px; line-height: normal; vertical-align: top; margin-left: 42px; }
+.home1 .sec-nav nav a { color: #000; font-size: 17px; line-height: normal; vertical-align: top; margin-left: 9%; }
 .home1 .sec-nav nav .info { display: none; position: absolute; right: 69px; font-size: 14px; width: 420px; padding: 0 9px 9px 9px; color: #333; background: rgba(255, 255, 255, 0.81); z-index: 4; }
 .home1 #nav-home, .home1 #nav-admin { top: 33px; }
 .home1 #nav-fleet, .home1 #nav-sales { top: 54px; }
 .home1 #nav-lease { top: 75px; }
 .home1 #nav-maintance { top: 96px; }
-.home1 #inair { top: 55px; z-index: 3; }
-.home1 #onground { top: 150px; z-index: 2; }
+.home1 #inair { top: 9%; z-index: 3; }
+.home1 #onground { top: 27%; z-index: 2; }
 
 /* HOME2 landing page */
 body.home2 { background: #efefef url(../img/bgHome2.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.home2 #site-logo { position: absolute; top: 24px; right: 47px; z-index: 1; display: block; margin: 0; padding: 0; }
+.home2 #site-logo { position: absolute; top: 7%; right: 6%; z-index: 1; display: block; margin: 0; padding: 0; }
 .home2 #site-logo img { width: 290px; height: 80px; }
-.home2 #safetyAward { position: absolute; right: 154px; bottom: 81px; z-index: 1; display: block; }
+.home2 #safetyAward { position: absolute; right: 7%; bottom: 17%; z-index: 1; display: block; }
 .home2 #safetyAward img { width: 146px; height: 129px; }
 .home2 .sec-nav { position: absolute; width: 100%; }
 .home2 .sec-nav h1 { display: inline-block; color: #666; font-size: 32px; font-weight: normal; margin-left: 32px; margin-bottom: 0; }
@@ -656,31 +658,31 @@ body.home2 { background: #efefef url(../img/bgHome2.jpg) no-repeat center center
 .home2 #nav-fleet, .home2 #nav-sales { top: 54px; }
 .home2 #nav-lease { top: 75px; }
 .home2 #nav-maintance { top: 96px; }
-.home2 #inair { top: 160px; z-index: 3; }
-.home2 #onground { top: 260px; z-index: 2; }
+.home2 #inair { top: 33%; z-index: 3; }
+.home2 #onground { top: 60%; z-index: 2; }
 
 /* HOME3 landing page */
 body.home3 { background: #efefef url(../img/bgHome3.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.home3 #site-logo { position: absolute; top: 77px; left: 282px; z-index: 1; display: block; margin: 0; padding: 0; }
+.home3 #site-logo { position: absolute; top: 15%; left: 39%; z-index: 1; display: block; margin: 0; padding: 0; }
 .home3 #site-logo img { width: 290px; height: 80px; }
-.home3 #safetyAward { position: absolute; right: 154px; bottom: 81px; z-index: 1; display: block; }
+.home3 #safetyAward { position: absolute; right: 3%; bottom: 15%; z-index: 1; display: block; }
 .home3 #safetyAward img { width: 146px; height: 129px; }
 .home3 .sec-nav { position: absolute; width: 100%; }
-.home3 .sec-nav h1 { display: inline-block; color: #fff; font-size: 32px; font-weight: normal; margin-left: 32px; margin-bottom: 0; }
+.home3 .sec-nav h1 { display: inline-block; color: #fff; font-size: 32px; font-weight: normal; margin-left: 7%; margin-bottom: 0; }
 .home3 .sec-nav nav { margin: 0; padding: 0; position: absolute; width: 100%; }
 .home3 .sec-nav nav:hover { background: rgba(255, 255, 255, 0.32); }
 .home3 .sec-nav nav:hover a { color: #333; text-shadow: 0 0 0 #fff; }
 .home3 .sec-nav nav.active { background: rgba(255, 255, 255, 0.81); }
 .home3 .sec-nav nav.active a { color: #000; text-shadow: 0 0 0 #fff; }
-.home3 .sec-nav nav a { color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); font-size: 17px; line-height: normal; vertical-align: top; margin-left: 42px; }
+.home3 .sec-nav nav a { color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); font-size: 17px; line-height: normal; vertical-align: top; margin-left: 8%; }
 .home3 .sec-nav nav .info { display: none; position: absolute; right: 69px; font-size: 14px; width: 420px; padding: 0 9px 9px 9px; color: #333; background: rgba(255, 255, 255, 0.81); z-index: 4; }
 .home3 #nav-home, .home3 #nav-admin { top: 33px; }
 .home3 #nav-fleet, .home3 #nav-sales { top: 54px; }
 .home3 #nav-lease { top: 75px; }
 .home3 #nav-maintance { top: 96px; }
-.home3 #inair { top: 55px; z-index: 3; }
-.home3 #onground { top: 150px; z-index: 2; }
+.home3 #inair { top: 13%; z-index: 3; }
+.home3 #onground { top: 40%; z-index: 2; }
 
 /* Image Gallery */
 .headerimg { display: block; height: 100%; background: no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
@@ -716,6 +718,37 @@ body.home3 { background: #efefef url(../img/bgHome3.jpg) no-repeat center center
 
 .roundabout li img { width: 100%; max-height: 100%; }
 
+/* MEDIA QUERIES 
+================================================== */
+@media screen and (min-width: 544px, max-width: 959px) { .sec-nav h1 { color: greenyellow !important; } }
+@media screen and (min-width: 960px, max-width: 1199px) { .sec-nav h1 { color: pink !important; } }
+@media screen and (min-width: 1200px) { .sec-nav h1 { font-size: 42px !important; }
+  .sec-nav nav a { font-size: 27px !important; }
+  #nav-home, #nav-admin { top: 36px !important; }
+  #nav-fleet, #nav-sales { top: 68px !important; }
+  #nav-lease { top: 100px !important; }
+  #nav-maintance { top: 132px !important; }
+  .sec-nav .info { font-size: 22px !important; width: 42% !important; line-height: normal !important; padding: 13px !important; display: block; overflow: hidden; }
+  #inair .info { top: 32px !important; bottom: auto !important; }
+  #onground .info { bottom: 23px !important; top: auto !important; }
+  .home #site-logo { top: 25%; left: 50%; }
+  .home #safetyAward { right: 5%; top: 20%; }
+  .home #inair { top: 5%; }
+  .home #onground { top: 20%; }
+  .home1 #site-logo { bottom: 26%; right: 20%; }
+  .home1 #safetyAward { right: 15%; top: 27%; }
+  .home1 #inair { top: 15%; }
+  .home1 #onground { top: 35%; }
+  .home1 .sec-nav h1 { margin-left: 13%; }
+  .home1 .sec-nav nav a { margin-left: 13%; }
+  .home2 #inair { top: 40%; }
+  .home2 #onground { top: 61%; }
+  .home3 #site-logo { top: 37%; left: 29%; }
+  .home3 #safetyAward { right: 15%; bottom: 25%; }
+  .home3 #inair { top: 33%; }
+  .home3 #onground { top: 65%; }
+  .home3 .sec-nav h1 { margin-left: 3%; }
+  .home3 .sec-nav nav a { margin-left: 3%; } }
 /* Tooltips ------------------------------------------------------------------- */
 .twipsy { display: none; position: absolute; visibility: visible; padding: 5px; font-size: 11px; z-index: 1000; filter: alpha(opacity=80); -khtml-opacity: 0.8; -moz-opacity: 0.8; opacity: 0.8; }
 .twipsy.fade { -webkit-transition: opacity 0.15s linear; -moz-transition: opacity 0.15s linear; -ms-transition: opacity 0.15s linear; -o-transition: opacity 0.15s linear; transition: opacity 0.15s linear; opacity: 0; }

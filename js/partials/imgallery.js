@@ -3,32 +3,32 @@ var slideshowSpeed = 6000;
 
 // Variable to store the images we need to set as background
 // which also includes some text and url's.
-var photos = [ {
-		"title" : "Lineup",
-		"image" : "bgHome.jpg",
-		"url" : "#",
-		"firstline" : "What's your",
-		"secondline" : "flavor?"
-	}, {
-		"title" : "A350 parked",
-		"image" : "bgHome1.jpg",
-		"url" : "#",
-		"firstline" : "Still busy at",
-		"secondline" : "work?"
-	}, {
-		"title" : "R44 in flight",
-		"image" : "bgHome2.jpg",
-		"url" : "#",
-		"firstline" : "Get out and be",
-		"secondline" : "active"
-	}, {
-		"title" : "B3 overfly",
-		"image" : "bgHome3.jpg",
-		"url" : "#",
-		"firstline" : "Take a new look at",
-		"secondline" : "Costa Rica"
-	}
-];
+// var photos = [ {
+// 		"title" : "Lineup",
+// 		"image" : "bgHome.jpg",
+// 		"url" : "#",
+// 		"firstline" : "What's your",
+// 		"secondline" : "flavor?"
+// 	}, {
+// 		"title" : "A350 parked",
+// 		"image" : "bgHome1.jpg",
+// 		"url" : "#",
+// 		"firstline" : "Still busy at",
+// 		"secondline" : "work?"
+// 	}, {
+// 		"title" : "R44 in flight",
+// 		"image" : "bgHome2.jpg",
+// 		"url" : "#",
+// 		"firstline" : "Get out and be",
+// 		"secondline" : "active"
+// 	}, {
+// 		"title" : "B3 overfly",
+// 		"image" : "bgHome3.jpg",
+// 		"url" : "#",
+// 		"firstline" : "Take a new look at",
+// 		"secondline" : "Costa Rica"
+// 	}
+// ];
 
 $(document).ready(function() {
 
