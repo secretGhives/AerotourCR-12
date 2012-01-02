@@ -565,6 +565,8 @@ details summary { cursor: pointer; }
 
 .ar { text-align: right; }
 
+.margin3x9 { margin: 3px 9px; }
+
 .clear { clear: both; }
 
 .overflow { overflow: hidden; }
@@ -584,7 +586,7 @@ body.page { overflow: visible; background: #efefef url(../img/bgHome.jpg) no-rep
 .page .page-header { margin: 0 0 13px 0; position: relative; }
 .page #page-nav { display: inline-block; position: absolute; bottom: -19px; right: 32px; }
 .page #social > * { vertical-align: text-bottom; }
-.page #page-side { padding-left: 9px; border-left: 1px dashed lavender; }
+.page #page-side { border-left: 1px dashed lavender; margin-right: 0; width: 24%; }
 .page .container { background: rgba(255, 255, 255, 0.42); width: 820px; }
 .page .container .content { background: rgba(255, 255, 255, 0.96); padding: 20px; margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */ -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); }
 .page .container .content p { margin-right: 20px; }
