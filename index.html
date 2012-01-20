@@ -7,179 +7,103 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title></title>
-	<meta name="description" content="AerotourCR homepage">
-	<meta name="author" content="KUZYA">
+	<title>AerotourCR</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
 
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
 
-	<script src="js/libs/modernizr-2.0.6.min.js"></script>
-	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>-->
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js"><\/script>')</script>
+	<!-- Temp Style REMOVE -->
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/su.css">
+	<!-- <link rel="stylesheet" href="css/duckhunt.css"> -->
+
 	<!--[if (gte IE 6)&(lte IE 8)]>
-		<script type="text/javascript" src="js/libs/selectivizr.js"></script>
+		<script type="text/javascript" src="js/libs/selectivizr-min.js"></script>
 	<![endif]-->
+	
+	<!-- REQUIRE SCRIPTS (INIT) -->
+	<script data-main="js/main" src="js/libs/require/require.js"></script>
 
+	<!-- OTHER INIT -->
+	<script defer src="js/classes/script.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
 
-	<script>
-	var pages = ['home', 'home1', 'home2', 'home3'];
-	$(function() {
-		$("body").addClass(pages[Math.floor(Math.random() * pages.length)]);
-	});
-	</script>
-
-	<script defer src="js/partials/modal.js"></script>
-	<script defer src="js/script.js"></script>
-
-	<!-- Run a site tour --
-	<script defer src="js/partials/tour.js"></script>-->
 </head>
 
-<body id="front-page" class="pretty">
+<body>
 
-<article id="site-content" class="container">
+	<div id="container" class="fadeOnLoad">
+	
+		<div class="topbar" data-dropdown="dropdown">
+			<div class="topbar-inner">
+				<div class="container">
+					<h3><a href="#runway">Aerotour<em>CR</em></a></h3>
+					<ul id="app-sections-nav" class="nav"><!-- URdFSZX -->
 
-	<h1 id="site-logo"><img src="img/aerotour.png" width="202px" height="56px" /></h1>
-	<div id="safetyAward"><img src="img/SafetyAward.png" width="146px" height="129px" /></div>
+						<li><button class="btn" onclick="window.location.href='#fly'" rel="tip" data-placement="below" data-original-title="Volar">Volar</button></li>
 
-	<section id="inair" class="sec-nav">
+						<li><button class="btn" onclick="window.location.href='#fleet'" rel="tip" data-placement="below" data-original-title="Flota">Flota</button></li>
 
-		<h1>EN EL AIRE</h1>
+						<li><button class="btn" onclick="window.location.href='#administration'" rel="tip" data-placement="below" data-original-title="Administracion">Administracion</button></li>
 
-		<nav id="nav-home">
-			<a href="#" title="OMG">Vuele con Aerotour</a>
-			<p class="info">
-			Contactenos 24 horas al dia, 365 dias al ano, podemos llevarlo a cualquier destino de nuestro pais.
-			<br/><br/>
-			<button class="btn primary" onclick="window.location='fly.html'">Ir a esta seccion</button>
-			<button class="btn primary" onclick="window.location='fly.html#quote'">Cotizacion</button>
-			<button class="btn primary" onclick="window.location='page.html#destinations'">Destinos</button>
-			</p>
-		</nav>
+						<li><button class="btn" onclick="window.location.href='#sales'" rel="tip" data-placement="below" data-original-title="Ventas">Ventas</button></li>
 
-		<nav id="nav-fleet">
-			<a href="#" title="Cool">Nuestra Flota</a>
-			<p class="info">
-			Con nuestra flota helicopters usted podra viajar seguro y rapido a cualquier destino.  Contamos con aeronaves de diferentes capacidades.
-			<br/><br/>
-			<button class="btn primary" onclick="window.location='fleet.html'">Flota</button>
-			</p>
-		</nav>
+						<li><button class="btn" onclick="window.location.href='#leasing'" rel="tip" data-placement="below" data-original-title="Leasing">Leasing</button></li>
 
-	</section>
+						<li><button class="btn" onclick="window.location.href='#maintance'" rel="tip" data-placement="below" data-original-title="Mantiminiento">Mantiminiento</button></li>
 
-	<section id="onground" class="sec-nav">
+					</ul>
+				</div>
+			</div><!-- /topbar-inner -->
+		</div>
 
-		<h1>EN LA TIERRA</h1>
+		<div id="page">
+			<div class="loading"><span>Espere..</span></div>
+		</div>
 
-		<nav id="nav-admin">
-			<a href="#" title="OMG">Administracion de Aeronaves</a>
-			<p class="info">
-			En Aerotour, nuestra finalidad es darle la plena expericiencia de opracion y administracion de helicopteros privados, poniendo atencion a todas las tareas escenciales con losmayores estandares internacionales de seguridad y matinimiento.
-			<br/><br/>
-			<button class="btn primary" onclick="window.location='administration.html'">Ir a esta seccion</button>
-			</p>
-		</nav>
+		<div id="app-footer" class="container ac">
+			<label class="footer-label">©AerotourCR</label>
+			<a href="#/site-terms">Terms</a> • <a href="#/site-policy">Content Policy</a> • <a href="#/site-privacy">Privacy</a>
 
-		<nav id="nav-sales">
-			<a href="#" title="Cool">Ventas y Adquisicion de Aeronaves</a>
-			<p class="info">
-			Con nuestra asesoria, experiencia y guia estamos seguros que tamara las descisiones correctas para elegir la aeronave adecuada y asi disfrutar de los beneficios que existen de tener una aeronave privada.
-			<br/><br/>
-			<button class="btn primary" onclick="window.location='sales.html'">Ir a esta seccion</button>
-			</p>
-		</nav>
-
-		<nav id="nav-lease">
-			<a href="#" title="Cool">Aquilla de Aeronaves</a>
-			<p class="info">
-			Contar con un helicoptero a toda hora puede ser una realidad con nuestro programa de Aquilla, con el cual con tarifas especiales usted podra estar en cualquier lugar de Costa Rica en minutos.
-			<br/><br/>
-			<button class="btn primary" onclick="window.location='lease.html'">Ir a esta seccion</button>
-			</p>
-		</nav>
-
-		<nav id="nav-maintance">
-			<a href="#" title="Cool">Mantenimiento de Aeronaves</a>
-			<p class="info">
-			Nuestro programa de mantenimiento no solo esta certificado internationalmente por los mismos fabricantes de las aeronaves, sino que el equipo humano esta actualizado con las ultimas nejoras en mantemiento para garantizarle asi un viaje seguro.  Brindamos servicios privados de mantenimiento.
-			<br/><br/>
-			<button class="btn primary" onclick="window.location='maintance.html'">Ir a esta seccion</button>
-			</p>
-		</nav>
-
-	</section>
-
-	<footer id="site-footer">
-		<section id="sitemap">
-			
-			<div class="g-fourth">
-				<h2>Media Center</h2>
-				<p>Vea video, fotografias, y articulos relacionados con Aerotour</p>
-				<p><a class="btn" href="#">Vea »</a></p>
-			</div>
-
-			<div class="g-fourth">
-				<h2>Servicios</h2>
-				<ul class="">
-					<li>Viajes Ejecutivos</li>
-					<li>Tours Aereos</li>
-					<li>Carga Externa</li>
-					<li>Publicidad Aerea</li>
-					<li>Translados Medicos</li>
-					<li>Filmacion y Fotografia</li>
-					<li>Lidar Planning</li>
-					<li>Topografia y mapeo</li>
-					<li>Construccion de helipuertos</li>
-				</ul><!-- / -->
-			</div>
-
-			<div class="g-fourth">
-				<h2>Nosotros</h2>
-				 <p>Nuestra promesa. </p>
-				<p><a class="btn" href="#">Vea »</a></p>
-			</div>
-
-			<address class="g-fourth">
-				<strong>Aerotour S.R.L.</strong>
-				<tel>+506 2232-1248</tel>
-				<tel>+506 2232-0660</tel>
-				<a href="mailto:mercadeo@aerotourcr.com">mercadeo@aerotourcr</a>
-				San Jose, Costa Rica<br />
-				Aeropuerto Int. Tobias Bolanos<br />
-				Hangar 26<br /><br />
-				<button data-controls-modal="modal-from-dom" data-backdrop="true" data-keyboard="true" class="btn">Mapa »</button>
-			</address>
-
-		</section><!-- /sitemap -->
-		<aside>
-			<button class="btn" id="toggleSitemap">Sitemap</button>
-			<img class="sponsors" src="img/aensa.png" alt="AENSA Flight School"/>
-			<img class="sponsors" src="img/hai.png" alt="Member of Heliocpter Association International"/>
-			<img class="sponsors" src="img/canatur.png" alt="Member of Canatur"/>
-			<img class="sponsors" src="img/robinson.png" alt="Authorized Robinson Helicopter Dealer"/>
-			<img class="sponsors" src="img/amigos.png" alt="Member of AMIGOS Association"/>
-		</aside>
-	</footer>
-
-<!-- Map modal screen -->
-<div id="modal-from-dom" class="modal hide fade">
-	<div class="modal-header">
-		<a href="#" class="close">×</a>
-		<h3>Locate us</h3>
-	</div>
-	<div class="modal-body">
-		<div id="map">
-			<br/>Actual map will go here, maybe
-			<br /><small><a href="http://www.google.com/maps?q=aerotour&amp;hl=en&amp;ie=UTF8&amp;view=map&amp;cid=2902145994640288262&amp;hq=aerotour&amp;hnear=&amp;ll=9.958741,-84.140993&amp;spn=0.006295,0.006295&amp;t=m&amp;vpsrc=0&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+			<aside class="clear ac">
+				<img class="sponsors" src="./img/logos/hai.png" alt="Member of Heliocpter Association International"/>
+				<img class="sponsors" src="./img/logos/canatur.png" alt="Member of Canatur"/>
+				<img class="sponsors" src="./img/logos/robinson.png" alt="Authorized Robinson Helicopter Dealer"/>
+				<img class="sponsors" src="./img/logos/amigos.png" alt="Member of AMIGOS Association"/>
+			</aside>
 		</div>
 	</div>
-</div>
 
-</article><!-- /site-content -->
-<!--// &#9734;  ☆ KUZYA.COM
+	<!-- Application colsole log -->
+	<aside id="console">
+		<div id="search_container"></div>
+		<div id="console_output"></div>
+	</aside>
+
+	<!-- Map modal screen -->
+	<div id="modal-from-dom" class="modal hide fade">
+		<div class="modal-header">
+			<a href="#" class="close">×</a>
+			<h3>Localicenos</h3>
+		</div>
+		<div class="modal-body">
+			<div id="map">
+				<br/>Actual map will go here, maybe
+				<br /><small><a href="http://www.google.com/maps?q=aerotour&amp;hl=en&amp;ie=UTF8&amp;view=map&amp;cid=2902145994640288262&amp;hq=aerotour&amp;hnear=&amp;ll=9.958741,-84.140993&amp;spn=0.006295,0.006295&amp;t=m&amp;vpsrc=0&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+			</div>
+		</div>
+	</div>
+
+	<!-- Application colsole log -->
+	<aside id="console">
+		<div id="search_container"></div>
+		<div id="console_output"></div>
+	</aside>
+
+</body>
+<!--// &#9734;  ☆ KUZYA
                              -~-%%%-,,
                            ,%       ^2%
                           -ZZ2       22
@@ -202,5 +126,4 @@
     │ Date of Creation ........................... Year 2012 │
     └────────────────────────────────────────────────────────┘
 //-->
-</body>
 </html>

@@ -1,0 +1,355 @@
+<!-- <link rel="stylesheet" href="css/vacordian.css"> -->
+<style>
+.bf_background img{
+	position:fixed;
+	top:0px;
+	left:0px;
+	height:100%;
+	cursor: pointer;
+}
+.bf_overlay{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	/*background: rgba(255,255,255,0.93);*/
+	opacity:0.5;
+}
+.bf_menu{
+	/*background:transparent url(../img/pattern.png) repeat top left;*/
+	background: rgba(255,255,255,0.81);
+	width:300px;
+	left:0px;
+	top:0px;
+	height:100%;
+	position:fixed;
+}
+h1.title{
+	color:#39F;
+	font-size:81px;
+	padding:0px 0px 20px 20px;
+}
+h1.title span{
+	font-size:24px;
+	margin:-10px 0px 0px 100px;
+}
+.bf_menu ul{
+	display:block;
+	margin-top:50px;
+}
+.bf_menu ul li{
+	display:block;
+}
+.bf_menu ul li a{
+	color:#000;
+	font-size:30px;
+	text-shadow:0px 0px 1px #fff;
+	line-height:50px;
+	padding:0px 20px 0px 30px;
+	display:block;
+	position:relative;
+	margin:5px 0px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-transition: all 0.3s ease-in-out;
+}
+.bf_menu ul li a span.bf_hover{
+	background: rgba(255,255,255,0.93);
+	opacity:0.1;
+	position:absolute;
+	width:0px;
+	height:0px;
+	top:50%;
+	left:0px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-transition: all 0.3s ease-in-out;
+}
+.bf_menu ul li a:hover span.bf_hover{
+	height:100%;
+	width:100%;
+	margin-top:-25px;
+	opacity:1.0;
+}
+.bf_menu ul li a span{
+	position:relative;
+}
+.bf_page{
+	display:none;
+}
+.bf_content_text{
+position: fixed;
+top: 142px;
+left: 300px;
+background: rgba(255,255,255,0.93);
+}
+.bf_content_text h2{
+	padding:30px 20px 5px 20px;
+	color:#39F;
+	font-size:30px;
+	text-shadow:0px 0px 1px #fff;
+}
+.bf_content_text p{
+	padding:5px 20px;
+	font-size:17px;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	color:#333;
+}
+.bf_content_text ul{
+	margin: 20px 0px 0px 24px;
+}
+.bf_content_text ul li{
+	float:left;
+}
+.bf_content_text ul li a{
+	display:block;
+	margin:4px;
+}
+.bf_content_text ul li a img{
+	display:block;
+	-moz-box-shadow:1px 1px 4px #000;
+	-webkit-box-shadow:1px 1px 4px #000;
+	box-shadow:1px 1px 4px #000;
+	opacity:0.7;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-transition: all 0.5s ease-in-out;
+}
+.bf_content_text ul li a:hover img{
+	opacity:1.0;
+}
+.bf_gallery{
+	display:none;
+}
+.bf_nav a{
+	width:72px;
+	height:140px;
+	position:fixed;
+	top:50%;
+	margin-top:-70px;
+	cursor:pointer;
+	opacity:0.3;
+	z-index:999;
+}
+a.bf_close{
+	top:10px;
+	right:10px;
+	background:transparent url(../img/close.png) no-repeat center center;
+	position:fixed;
+	width:40px;
+	height:40px;
+	cursor:pointer;
+	opacity:0.3;
+	z-index:999;
+}
+.bf_nav a:hover, a.bf_close:hover{
+	opacity:0.9;
+}
+.bf_nav a.bf_next{
+	background:transparent url(../img/next.png) no-repeat center center;
+	right:-72px;
+}
+.bf_nav a.bf_prev{
+	background:transparent url(../img/prev.png) no-repeat center center;
+	left:-72px;
+}
+.bf_gallery_wrapper{
+	top:50%;
+	left:50%;
+	position: fixed;
+	width: 500px;
+	height: 250px;
+	margin: -125px 0px 0px -260px;
+	color:#fff;
+}
+.bf_gallery_item{
+	position:absolute;
+	display:none;
+	height:440px;
+	width:560px;
+	top:-95px;
+	left:-20px; /*480px to slide from right, -520px to slide from right*/
+	display:none;
+}
+.bf_gallery_item img{
+	position:absolute;
+	top:95px;
+	height:250px;
+	width:500px;
+	left:20px;
+	z-index:9;
+	cursor:url(../img/cursor_full.cur),  ne-resize;
+}
+.bf_heading,
+.bf_desc{
+	position:absolute;
+	height:250px;
+	width:500px;
+	text-shadow:1px 1px 1px #000;
+	background:transparent url(../img/bg_black.png) repeat top left;
+	-moz-border-radius:0px 100px 0px 100px;
+	border-radius:0px 100px 0px 100px;
+}
+.bf_heading{
+	top:95px;/*top:0px;*/
+	left:20px /*left:0px;*/
+}
+.bf_heading h2{
+	position:absolute;
+	top:20px;
+	left:20px;
+	font-size:56px;
+	line-height:66px;
+}
+.bf_desc{
+	bottom:95px; /*bottom:0px;*/
+	right:40px /*right:0px;*/
+}
+.bf_desc p{
+	position:absolute;
+	bottom:20px;
+	right:20px;
+	font-size:30px;
+	line-height:66px;
+}
+/* Footer Style */
+.bf_footer{
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	font-size:13px;
+	background:#000;
+	opacity:0.9;
+	height:20px;
+	padding-bottom:5px;
+	text-transform:uppercase;
+	z-index:4;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+}
+.bf_footer a{
+	padding:5px 10px;
+	letter-spacing:1px;
+	text-shadow:1px 1px 1px #000;
+	color:#ddd;
+	float:right;
+}
+.bf_footer a:hover{
+	color:#fff;
+}
+.bf_footer a span{
+	font-weight:bold;
+}
+.bf_footer a.bf_left{
+	float:left;
+}
+</style>
+
+
+<div id="map"></div>
+<div id="bf_container" class="bf_container">
+	<div id="bf_background" class="bf_background">
+		<img src="img/bg/bgHome.jpg" alt="image1" style="display:none;"/>
+		<div class="bf_overlay"></div>
+	</div>
+	<div id="bf_page_menu" class="bf_menu" >
+		<h1 class="title1">AerotourCR</h1>
+		<ul>
+			<li><a href="#" data-content="home"><span class="bf_hover"></span><span>In Aire</span></a></li>
+			<li><a href="#" data-content="about"><span class="bf_hover"></span><span>En Tierra</span></a></li>
+			<!-- <li><a href="#" data-content="menu"><span class="bf_hover"></span><span>Our Menu</span></a></li> -->
+			<li><a href="#" data-content="visit"><span class="bf_hover"></span><span>Localizaciones</span></a></li>
+		</ul>
+	</div>
+	<div class="bf_page" id="home" style="display:block;">
+		<div class="bf_content_text">
+			<h2>Welcome</h2>
+			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+			<a href="#fly">Entra aqui</a>
+		</div>
+	</div>
+	<div class="bf_page" id="about">
+		<div class="bf_content_text">
+			<h2>About us</h2>
+			<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+			<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+		</div>
+	</div>
+	<!-- <div class="bf_page" id="menu">
+		<div class="bf_content_text">
+			<h2>Our Menu</h2>
+			<p>Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+			<ul id="bf_dishes">
+				<li><a href="#"><img src="images/thumbs/1.jpg" alt="thumb1"/></a></li>
+				<li><a href="#"><img src="images/thumbs/2.jpg" alt="thumb2"/></a></li>
+				<li><a href="#"><img src="images/thumbs/3.jpg" alt="thumb3"/></a></li>
+				<li><a href="#"><img src="images/thumbs/4.jpg" alt="thumb4"/></a></li>
+				<li><a href="#"><img src="images/thumbs/5.jpg" alt="thumb5"/></a></li>
+				<li><a href="#"><img src="images/thumbs/6.jpg" alt="thumb6"/></a></li>
+			</ul>
+		</div>
+		<div id="bf_gallery" class="bf_gallery">
+			<a id="bf_close" href="#" class="bf_close"></a>
+			<div class="bf_nav">
+				<a id="bf_prev" href="#" class="bf_prev"></a>
+				<a id="bf_next" href="#" class="bf_next"></a>
+			</div>
+			<div class="bf_gallery_wrapper">
+				<div class="bf_gallery_item">
+					<div class="bf_heading"><h2>Pizza Rustica</h2></div>
+					<div class="bf_desc">
+						<p>Fresh ingredients and authentic flavours</p>
+					</div>
+					<img src="images/foreground/1.jpg" alt="image1" data-bgimg="img/bg/1.jpg" />
+				</div>
+				<div class="bf_gallery_item">
+					<div class="bf_heading"><h2>Pizza Quattro Stagioni</h2></div>
+					<div class="bf_desc">
+						<p>Originality meets tradition</p>
+					</div>
+					<img src="images/foreground/2.jpg" alt="image1" data-bgimg="img/bg/2.jpg" />
+				</div>
+				<div class="bf_gallery_item">
+					<div class="bf_heading"><h2>Rucolini</h2></div>
+					<div class="bf_desc">
+						<p>Dive into the balance of taste</p>
+					</div>
+					<img src="images/foreground/3.jpg" alt="image1" data-bgimg="img/bg/3.jpg" />
+				</div>
+				<div class="bf_gallery_item">
+					<div class="bf_heading"><h2>Salsicce Boscaiola</h2></div>
+					<div class="bf_desc">
+						<p>The right intensity</p>
+					</div>
+					<img src="images/foreground/4.jpg" alt="image1" data-bgimg="img/bg/4.jpg" />
+				</div>
+				<div class="bf_gallery_item">
+					<div class="bf_heading"><h2>Tortelloni Alla Zucca</h2></div>
+					<div class="bf_desc">
+						<p>Incredibly tasty perfection</p>
+					</div>
+					<img src="images/foreground/5.jpg" alt="image1" data-bgimg="img/bg/5.jpg" />
+				</div>
+				<div class="bf_gallery_item">
+					<div class="bf_heading"><h2>Calamaretti Fritti</h2></div>
+					<div class="bf_desc">
+						<p>Combine chunky and soft</p>
+					</div>
+					<img src="images/foreground/6.jpg" alt="image1" data-bgimg="img/bg/6.jpg" />
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="bf_page" id="visit"></div>
+</div>
+
+
+	<!-- Application colsole log -->
+	<aside id="console">
+		<div id="search_container"></div>
+		<div id="console_output"></div>
+	</aside>
