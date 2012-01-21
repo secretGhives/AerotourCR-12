@@ -3,7 +3,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/landing/main2',
+  'views/landing/main1',
   'views/home/main',
   'views/fleet/main',
   'views/administration/main',

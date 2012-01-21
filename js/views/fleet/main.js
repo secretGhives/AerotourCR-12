@@ -13,8 +13,6 @@ define([
 			var data = {};
 			var compiledTemplate = _.template( fleetTemplate, data );
 
-			myAppName.console.log('views/fleet/main.js says Hi');
-
 			// Render template
 			this.el.html( compiledTemplate );
 

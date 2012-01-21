@@ -16,8 +16,6 @@ define([
 			// Render template
 			this.el.html( compiledTemplate );
 
-			myAppName.console.log('views/landing/main.js says Hi');
-	
 
 			if ($("[rel=pop]").length > 0){
 				$("[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });

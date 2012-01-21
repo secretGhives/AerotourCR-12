@@ -13,8 +13,6 @@ define([
 			var data = {};
 			var compiledTemplate = _.template( administrationTemplate, data );
 
-			myAppName.console.log('views/administration/main.js says Hi');
-
 			// Render template
 			this.el.html( compiledTemplate );
 

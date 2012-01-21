@@ -1,224 +1,115 @@
-<!-- <link rel="stylesheet" href="css/vacordian.css"> -->
 <style>
-img.ac_bgimage{
-	position:fixed;
-	left:0px;
-	top:0px;
-	width:100%;
-	opacity:0.96;
-	display:none;
-}
-/*
-.ac_overlay{
-	width:100%;
-	height:100%;
-	position:fixed;
-	top:0px;
-	left:0px;
-	background:transparent url(../img/pattern.png) repeat top left;
-	opacity: 0.3;
-}
-*/
-.ac_loading{
-	position:fixed;
-	top:10px;
-	right:10px;
-	background: transparent url(../img/loader.gif) no-repeat center center;
-	width:50px;
-	height:50px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px 10px 10px 10px;
-	z-index:999;
-	opacity:0.7;
-	display:none;
-}
-.ac_content{
-	position:fixed;
-	height:90px;
-	width:100%;
-	top:50%;
-	left:0px;
-	margin-top:-65px;
-}
-.ac_content h1{
-	/* background: pink url(../img/bg_menu.png) repeat top left; */
-	background: rgba(255,255,255,.96);
-	display:block;
-	float:left;
-	width:222px;
-	height:50px;
-	padding:20px;
-	font-size:36px;
-	font-weight:bold;
-	line-height:20px;
-	margin-right:1px;
-}
-.ac_content h1 span{
-	display:block;
-	font-weight:normal;
-	font-size:14px;
-}
-.ac_menu{
-	background: rgba(255,255,255,.69);
-	float:left;
-	position:relative;
-	height:90px;
-	width:0px; 
-}
-.ac_menu > ul{
-	float:right;
-}
-.ac_menu > ul > li{
-	float:left;
-	position:relative;
-	height:90px;
-	overflow:hidden;
-}
-.ac_menu > ul > li a{
-	margin-top:60px;
-	opacity:0;
-	display:block;
-}
-.ac_subitem{
-	width:400px;
-	height:0px; /* animate to 400px */
-	top:50%;
-	right:0px;
-	margin-top:0px; /* animate to -200px */
-	position:fixed;
-	z-index:99;
-	overflow:hidden;
-	background: rgba(255,255,255,.96);
-}
-.ac_subitem h2{
-	font-size:22px;
-	font-weight:bold;
-	color:#fff;
-	padding: 40px 0px 0px 40px;
-	text-shadow:0px 0px 1px #000;
-}
-.ac_subitem ul{
-	padding:0px 40px;
-}
-.ac_subitem ul li{
-	margin:10px 0px;
-}
-.ac_subitem ul li:first-child{
-	font-size:14px;
-	text-transform:none;
-	border-bottom:1px dotted #333;
-	padding-bottom:15px;
-	margin-bottom:15px;
-}
-span.ac_close{
-	float:right;
-	margin:10px;
-	width:11px;
-	height:12px;
-	cursor:pointer;
-	background: pink url(../img/close.png) no-repeat top left;
-	opacity:0.4;
-}
-span.ac_close:hover{
-	opacity:1.0;
-}
-.ac_footer{
-	position:fixed;
-	bottom:0px;
-	left:0px;
-	width:100%;
-	font-size:13px;
-	background:#000;
-	opacity:0.9;
-	height:20px;
-	padding-bottom:5px;
-}
-.ac_footer a{
-	padding:5px 10px;
-	letter-spacing:1px;
-	text-shadow:1px 1px 1px #000;
-	color:#ddd;
-	float:right;
-}
-.footer a:hover{
-	color:#fff;
-}
-.ac_footer a span{
-	font-weight:bold;
-}
-.ac_footer a.ac_left{
-	float:left;
+html { background: #fff; overflow: hidden; }
+.topbar {display: none;}
+#app-footer {
+z-index: 999;
+position: fixed;
+display: block;
+bottom: 0;
+left: 0;
+right: 0;
+margin: 0;
+width: 100%;
+padding: 0;
 }
 </style>
+<div id="ac_background" class="ac_background">
+	<img class="ac_bgimage" src="img/bg/bgHome3.jpg" alt="Background"/>
+	<div class="ac_overlay"></div>
+	<div class="ac_loading"></div>
+</div>
+<div id="ac_content" class="ac_content">
+	<h1 id="landing-logo"><span>Helicopteros y Avionetas</span>AerotourCR</h1>
+	<div id="safetyAward"><img src="./img/logos/SafetyAward.png" width="142px" /></div>
+	<div class="ac_menu">
+		<ul>
+			<!--  -->
+			<li>
+				<a href="#" rel="img/bg/bgHome2.jpg" class="btn primary">En Aire</a>
+				<div class="ac_subitem">
+					<span class="ac_close"></span>
+					<nav id="nav-home">
+						<h2>Vuele con Aerotour</h2>
+						<p class="info">
+						Contactenos 24 horas al dia, 365 dias al ano, podemos llevarlo a cualquier destino de nuestro pais.
+						<br/><br/>
+						<button class="btn primary" onclick="window.location='#fly'">Ir a esta seccion</button>
+						<button class="btn primary" onclick="window.location='#fly'">Cotizacion</button>
+						<button class="btn primary" onclick="window.location='#fly'">Destinos</button>
+						</p>
+					</nav>
 
-		<div id="ac_background" class="ac_background">
-			<img class="ac_bgimage" src="img/bg/bgHome2.jpg" alt="Background"/>
-			<div class="ac_overlay"></div>
-			<div class="ac_loading"></div>
-		</div>
-		<div id="ac_content" class="ac_content">
-			<h1><span>Helicopteros y Aveonetas</span>AerotourCR</h1>
-			<div class="ac_menu">
-				<ul>
-					<li>
-						<a href="img/bg/bgHome3.jpg" class="btn">En Aire</a>
-						<div class="ac_subitem">
-							<span class="ac_close"></span>
-							<h2>En Aire</h2>
-							<ul>
-								<li>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</li>
-								<li>Lobster Bisque</li>
-								<li>Smoked Salmon Terrine</li>
-								<li>Tuna Ceviche</li>
-								<li>Wild Mushroom Flan</li>
-								<li>Almond Bruschetta</li>
-								<li>Green Chilli Canapee</li>
-								<li>Artichoke Rucula Salad</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<a href="img/bg/bgHome1.jpg" class="btn">En Tierra</a>
-						<div class="ac_subitem">
-							<span class="ac_close"></span>
-							<h2>En Tierra</h2>
-							<ul>
-								<li>Drops of rain could be heard hitting the pane, which made him feel quite sad.</li>
-								<li>Wild Sea Bass Filet</li>
-								<li>Linguini and Clams</li>
-								<li>Shrimp and Crabmeat Alfredo</li>
-								<li>Broiled Stuffed Flounder </li>
-								<li>Mussels Marinara</li>
-								<li>Grilled Mooloolaba Giant king prawns</li>
-								<li>Lobster Mornay</li>
-								<li>Fresh Shrimp Tart</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<a href="img/bg/bgHome.jpg" class="btn">Localization</a>
-						<div class="ac_subitem">
-							<span class="ac_close"></span>
-							<h2>Localization</h2>
-							<ul>
-								<li>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</li>
-								<li>Ratatouille</li>
-								<li>Le Tourin</li>
-								<li>Wild Salmon Bruschetta</li>
-								<li>Sweet Mustard Gratin</li>
-								<li>Homemade Pizza Mediteranica</li>
-								<li>Spanakopita Speciale</li>
-								<li>Ricotta Spinach Cannelloni</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
+					<nav id="nav-fleet">
+						<h2>Nuestra Flota</h2>
+						<p class="info">
+						Con nuestra flota helicopters usted podra viajar seguro y rapido a cualquier destino.  Contamos con aeronaves de diferentes capacidades.
+						<br/><br/>
+						<button class="btn primary" onclick="window.location='#fleet'">Flota</button>
+						</p>
+					</nav>
+				</div>
+			</li>
 
-	<!-- Application colsole log -->
-	<aside id="console">
-		<div id="search_container"></div>
-		<div id="console_output"></div>
-	</aside>
+			<!--  -->
+			<li>
+				<a href="#" rel="img/bg/bgHome1.jpg" class="btn primary">En Tierra</a>
+				<div class="ac_subitem">
+					<span class="ac_close"></span>
+					<nav id="nav-admin">
+						<h2>Administracion de Aeronaves</h2>
+						<p class="info">
+						En Aerotour, nuestra finalidad es darle la plena expericiencia de opracion y administracion de helicopteros privados, poniendo atencion a todas las tareas escenciales con losmayores estandares internacionales de seguridad y matinimiento.
+						<br/><br/>
+						<button class="btn primary" onclick="window.location='#administration'">Ir a esta seccion</button>
+						</p>
+					</nav>
+
+					<nav id="nav-sales">
+						<h2>Ventas y Adquisicion de Aeronaves</h2>
+						<p class="info">
+						Con nuestra asesoria, experiencia y guia estamos seguros que tamara las descisiones correctas para elegir la aeronave adecuada y asi disfrutar de los beneficios que existen de tener una aeronave privada.
+						<br/><br/>
+						<button class="btn primary" onclick="window.location='#sales'">Ir a esta seccion</button>
+						</p>
+					</nav>
+
+					<!-- <nav id="nav-lease">
+						<a href="#" title="Cool">Aquilla de Aeronaves</a>
+						<p class="info">
+						Contar con un helicoptero a toda hora puede ser una realidad con nuestro programa de Aquilla, con el cual con tarifas especiales usted podra estar en cualquier lugar de Costa Rica en minutos.
+						<br/><br/>
+						<button class="btn primary" onclick="window.location='#leasing'">Ir a esta seccion</button>
+						</p>
+					</nav> -->
+
+					<!-- <nav id="nav-maintance">
+						<a href="#" title="Cool">Mantenimiento de Aeronaves</a>
+						<p class="info">
+						Nuestro programa de mantenimiento no solo esta certificado internationalmente por los mismos fabricantes de las aeronaves, sino que el equipo humano esta actualizado con las ultimas nejoras en mantemiento para garantizarle asi un viaje seguro.  Brindamos servicios privados de mantenimiento.
+						<br/><br/>
+						<button class="btn primary" onclick="window.location='#maintance'">Ir a esta seccion</button>
+						</p>
+					</nav> -->
+				</div>
+			</li>
+
+			<!--  -->
+			<li>
+				<a href="#" rel="img/bg/bgHome.jpg" class="btn">Localization</a>
+				<div class="ac_subitem">
+					<span class="ac_close"></span>
+					<h2>Aerotour S.R.L.</h2>
+					<address class="landing-address">
+						<tel>+506 2232-1248</tel>
+						<tel>+506 2232-0660</tel>
+						<a href="mailto:ventas@aerotourcr.com">ventas@aerotourcr</a>
+						San Jose, Costa Rica<br />
+						Aeropuerto Int. Tobias Bolaños<br />
+						Hangar 26
+					</address>
+				</div>
+			</li>
+
+		</ul>
+	</div>
+</div>
