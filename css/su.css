@@ -295,13 +295,22 @@ padding: 13px 0px 0px 42px;
 
 /* OTHER */
 /* Image Gallery */
-.headerimg { display: block; height: 100%; background: no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.headerimg {
+display: block;
+width: 100%;
+background: no-repeat center center;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+-o-background-size: contain;
+background-size: contain;
+height: 100%;
+}
 
 #headerimgs { display: block; height: 420px; position: relative; border: 1px dotted lavender; overflow: hidden; }
 
 #headertxt { position: absolute; top: 32px; background: rgba(255, 255, 255, 0.69); }
 
-#headernav-outer { position: absolute; display: inline-block; bottom: 3px; left: 6px; }
+#headernav-outer { position: absolute; display: inline-block; bottom: 3px; left: 36px; }
 
 #firstline { color: #333; font-size: 40px; padding: 4px 13px 7px; float: left; display: block; }
 

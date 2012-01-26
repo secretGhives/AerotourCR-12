@@ -1,58 +1,3 @@
-// Filename: views/home/main
-define([
-	'jquery',
-	'underscore',
-	'backbone',
-	'text!templates/home/main.html',
-	//libs
-	'libs/jquery/easing',
-	// 'libs/jquery/mousewheel',
-	//autostart
-	'bootstrap/bootstrap-tabs',
-	'bootstrap/bootstrap-alerts',
-	'bootstrap/bootstrap-modal',
-	'bootstrap/bootstrap-buttons',
-	'bootstrap/bootstrap-dropdown',
-	//requires init
-	'order!bootstrap/bootstrap-twipsy',
-	'order!bootstrap/bootstrap-popover',
-	'classes/roundabout'
-], function($, _, Backbone, mainHomeTemplate){
-
-	var mainHomeView = Backbone.View.extend({
-		el: $("#page"),
-		render: function(){
-
-			//render template
-			this.el.html(mainHomeTemplate);
-
-			$("[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
-			$("[rel=tip]").twipsy({live: true});
-			if ($("[rel=roundabout]").length > 0){
-				$("[rel=roundabout]").roundabout();
-			};
-
-			var photos = [ {
-					"image" : "fly/fly.jpg",
-					"firstline" : "Going on",
-					"secondline" : "vacation?"
-				}, {
-					"image" : "fly/fly1.jpg",
-					"firstline" : "Or still busy at",
-					"secondline" : "work?"
-				}, {
-					"image" : "fly/fly2.jpg",
-					"firstline" : "Get out and be",
-					"secondline" : "active"
-				}, {
-					"image" : "fly/fly3.jpg",
-					"firstline" : "Take a fresh breath of",
-					"secondline" : "nature"
-				}
-			];
-
-
-
 				// Speed of the automatic slideshow
 				var slideshowSpeed = 6000;
 
@@ -162,13 +107,6 @@ define([
 				navigate("next");
 				
 				// Start playing the animation
-				// interval = setInterval(function() {
-				// 	navigate("next");
-				// }, slideshowSpeed);
-			
-
-			
-		}
-	});
-	return new mainHomeView;
-});
+				interval = setInterval(function() {
+					navigate("next");
+				}, slideshowSpeed);
