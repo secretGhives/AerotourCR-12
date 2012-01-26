@@ -37,8 +37,8 @@ background-size: contain; -webkit-background-size: contain; -moz-background-size
 #social a { font-size: 1.6em; padding: 0; line-height: normal; text-decoration: none; }
 
 
-
-
+.media-grid li { display: inline-block; vertical-align: top; }
+.roundabout li { background: transparent; }
 
 
 #app-sections-nav .btn { -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
