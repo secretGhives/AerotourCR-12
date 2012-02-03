@@ -7,85 +7,88 @@
 
 		<div class="row">
 
-			<div class="span12">
-				<div id="headerimgs">
-					<div id="headerimg1" class="headerimg"></div>
-					<div id="headerimg2" class="headerimg"></div>
-					<!-- Slideshow controls -->
-					<div id="headernav-outer">
-						<div id="headernav">
-							<button id="back" class="btn icon-btn"><</button>
-							<button id="control" class="btn icon-btn">]</button>
-							<button id="next" class="btn icon-btn">></button>
+			<div class="span9">
+				<div id="salesCarousel" class="carousel slide">
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="img/sales/sales.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Friendly staff</h4>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/sales/sales1.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Facilities</h4>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/sales/sales2.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Facilities upstairs</h4>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/sales/sales3.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>VIP area</h4>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/sales/sales4.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Office upstairs</h4>
+							</div>
 						</div>
 					</div>
-					<!-- jQuery handles for the text displayed on top of the images -->
-					<div id="headertxt">
-						<p class="caption">
-							<span id="firstline"></span>
-							<span id="secondline"></span>
-						</p>
-					</div>
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 				</div>
 
 				<p class="page-info">¿Para que lo quiere?... ¿Para cúantas personas?... ¿Cúal es la misión? Si tiene la respuesta para esas preguntas podemos asesorarlo con la adquicisión de su helicóptero o avión. Una de nuestras divisiones llamada AENSA, es la única representante autorizado por parte de ROBINSON HELICOPTER COMPANY para la venta de este modelo de helicóptero, siendo el más vendido en el mundo, por ser seguro, accesible y eficiente. Por supuesto, si desea otro tipo de helicóptero o avión nuestra red de socios a nivel internacional cuentan con un inventario de aeronaves que le garantizan una inversión inteligente.</p>
 
-				<!-- <div class="padleft20">
-					<ul rel="roundabout" class="unstyled roundabout">
-						<li><img src="./img/field.jpg" alt="Award" /></li>
-						<li><img src="./img/bbp.jpg" alt="Backpack" /></li>
-						<li><img src="./img/lake.jpg" alt="Bear" /></li>
-						<li><img src="./img/field.png" alt="Gun" /></li>
-						<li><img src="./img/lake.png" alt="High-Five" /></li>
-						<li><img src="./img/bbp.png" alt="Mustache" /></li>
-						<li><img src="./img/lake.png" alt="Sun" /></li>
-					</ul>
-				</div> -->
-
-				<form action="page_submit" method="post" accept-charset="utf-8">
-				<fieldset>
-					<div class="clearfix">
-						<label for="prependedInput">Nombre</label>
-						<div class="input">
-							<div class="input-prepend">
-								<span class="add-on">N</span>
-								<input class="large" id="prependedInput" name="prependedInput" size="16" type="text" />
+				<form class="form-horizontal" action="page_submit" method="post" accept-charset="utf-8">
+					<fieldset>
+						<legend>Request a quote for an Aircraft</legend>
+						<div class="control-group">
+							<label class="control-label" for="quote-name">Nombre</label>
+							<div class="controls">
+								<input type="text" class="input-xlarge" id="quote-name">
 							</div>
 						</div>
-					</div><!-- /clearfix -->
-					<div class="clearfix">
-						<label for="prependedInput">Email</label>
-						<div class="input">
-							<div class="input-prepend">
-								<span class="add-on">@</span>
-								<input class="large" id="prependedInput" name="prependedInput" size="16" type="text" />
+
+						<div class="control-group">
+						  <label class="control-label" for="quote-email">Email</label>
+						  <div class="controls">
+						    <div class="input-prepend">
+						      <span class="add-on">@</span>
+						      <input class="span2" id="quote-email" size="16" type="text">
+						    </div>
+						  </div>
+						</div>
+
+						<div class="control-group">
+							<label class="control-label" for="quote-text">Comentarios</label>
+							<div class="controls">
+								<textarea class="input-xlarge" id="quote-text" rows="3"></textarea>
 							</div>
 						</div>
-					</div><!-- /clearfix -->
-					<div class="clearfix">
-						<label for="textarea">Commentarios</label>
-						<div class="input">
-							<textarea class="span7" id="textarea2" name="textarea2" rows="3"></textarea>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary">Enviar</button>
 						</div>
-					</div><!-- /clearfix -->
-
-					<div class="actions">
-						<input type="submit" class="btn primary" value="Enviar">
-					</div>
-				</fieldset>
+					</fieldset>
 				</form>
 				
-			</div><!-- /span12 -->
+			</div><!-- /span9 -->
 
-			<div class="span4 sidebar">
+			<div class="span3 sidebar">
 				<div id="social" class="ac">
-
-					<a href="//facebook.com/aerotourcr" target="_blank" id="link-fb" class="icon-btn big">f</a>
-					<a href="#" target="_blank" id="link-gp" class="icon-btn big">g</a>
-					<a href="//linkedin.com/pub/aerotourcr" target="_blank" id="link-li" class="icon-btn big">l</a>
-					<a href="//youtube.com/user/Aerotourcr/videos" target="_blank" id="link-yt" class="icon-btn big">y</a>
-					<a href="#" id="link-sy" class="icon-btn big">s</a>
-
+					<a href="//facebook.com/aerotourcr" target="_blank" id="link-fb" class="ico-btn big">f</a>
+					<a href="//plus.google.com/118023243299011851814" target="_blank" id="link-gp" class="ico-btn big">g</a>
+					<a href="//linkedin.com/pub/aerotour-costa-rica/47/360/4b" target="_blank" id="link-li" class="ico-btn big">l</a>
+					<a href="//youtube.com/user/aerotourchannel" target="_blank" id="link-yt" class="ico-btn big">y</a>
+					<a href="callto//:aerotourcr" id="link-sy" class="ico-btn big">s</a>
 				</div>
 
 				<span class="separator">---</span>

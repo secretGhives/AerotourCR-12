@@ -18,7 +18,7 @@ define([
 
 
 			if ($("[rel=pop]").length > 0){
-				$("[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
+				$("[rel=pop]").popover();
 			}
 
 			if ($("[rel=roundabout]").length > 0){
@@ -26,7 +26,7 @@ define([
 			}
 						
 			if ($("[rel=tip]").length > 0){
-				$("[rel=tip]").twipsy({live: true});
+				//$("[rel=tip]").twipsy({live: true});
 			}
 
 

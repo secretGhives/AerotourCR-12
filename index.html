@@ -12,9 +12,11 @@
 	<meta name="author" content="">
 
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 
 	<!-- Temp Style REMOVE -->
+	<link rel="stylesheet" href="css/slimbox2.css">
 	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="css/su.css">
 	<!-- <link rel="stylesheet" href="css/duckhunt.css"> -->
@@ -35,27 +37,25 @@
 
 	<div id="container" class="fadeOnLoad">
 	
-		<div class="topbar" data-dropdown="dropdown">
-			<div class="topbar-inner">
-				<div class="container">
-					<h3 id="app-logo"><a href="#">Aerotour<em>CR</em></a></h3>
-					<ul id="app-sections-nav" class="nav"><!-- URdFSZX -->
+		<!-- App Header -->
+		<div id="app-header" class="navbar-fixed-top">
+			<div class="container">
+				<h3 class="brand"><a href="#runway">AerotourCR<em>.</em>com</a></h3>
 
-						<li><button class="btn" onclick="window.location.href='#fly'" rel="tip" data-placement="below" data-original-title="Volar">Volar</button></li>
+				<div class="btn-toolbar">
 
-						<li><button class="btn" onclick="window.location.href='#fleet'" rel="tip" data-placement="below" data-original-title="Flota">Flota</button></li>
+					<div class="btn-group"><!-- URdFSZX -->
+						<a class="btn" href="#fly" rel="tip" data-placement="bottom" title="Fly">Volar</a>
 
-						<li><button class="btn" onclick="window.location.href='#administration'" rel="tip" data-placement="below" data-original-title="Administracion">Administracion</button></li>
+						<a class="btn" href="#fleet" rel="tip" data-placement="bottom" title="Fleet">Flota</a>
 
-						<li><button class="btn" onclick="window.location.href='#sales'" rel="tip" data-placement="below" data-original-title="Ventas">Ventas</button></li>
+						<a class="btn" href="#administration" rel="tip" data-placement="bottom" title="Administration">Administracion</a>
 
-						<!-- <li><button class="btn" onclick="window.location.href='#leasing'" rel="tip" data-placement="below" data-original-title="Leasing">Leasing</button></li> -->
+						<a class="btn" href="#sales" rel="tip" data-placement="bottom" title="Sales">Ventas</a>
+					</div>
 
-						<!-- <li><button class="btn" onclick="window.location.href='#maintance'" rel="tip" data-placement="below" data-original-title="Mantiminiento">Mantiminiento</button></li> -->
-
-					</ul>
 				</div>
-			</div><!-- /topbar-inner -->
+			</div><!-- /app-header container -->
 		</div>
 
 		<div id="page">

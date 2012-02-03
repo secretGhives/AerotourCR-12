@@ -11,8 +11,8 @@ require.config({
     text: 'libs/require/text',
     order: 'libs/require/order',
     templates: '../templates',
-    bootstrap: 'partials',
-    classes: '../js/classes'
+    bootstrap: 'libs/bootstrap/bootstrap',
+    slimbox: 'libs/slimbox/slimbox2'
   }
 
 });

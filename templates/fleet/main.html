@@ -7,125 +7,219 @@
 
 		<div class="row">
 
-			<div class="span12">
-				<div class="padleft20">
-					<ul rel="roundabout" class="unstyled roundabout">
-						<li><figure>
-							<img src="./img/fleet/fleet.jpg" width="100%" height="auto" rel='lightbox' />
-							<figcaption>Aerotour Helicopter lineup</figcaption>
-						</figure></li>
-						<li><figure>
-							<img src="./img/fleet/fleet1.jpg" width="100%" height="auto" rel='lightbox' />
-							<figcaption>Medivac services</figcaption>
-						</figure></li>
-						<li><figure>
-							<img src="./img/fleet/fleet2.jpg" width="100%" height="auto" rel='lightbox' />
-							<figcaption>Construction</figcaption>
-						</figure></li>
-						<li><figure>
-							<img src="./img/fleet/fleet3.jpg" width="100%" height="auto" rel='lightbox' />
-							<figcaption>Video filming</figcaption>
-						</figure></li>
-						<li><figure>
-							<img src="./img/fleet/fleet4.jpg" width="100%" height="auto" rel='lightbox' />
-							<figcaption>Touring</figcaption>
-						</figure></li>
-					</ul>
+			<div class="span9">
+				<div id="fleetCarousel" class="carousel slide">
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="img/fleet/fleet.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Aerotour Helicopter lineup</h4>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/fleet/fleet1.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Medivac services</h4>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/fleet/fleet2.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Construction</h4>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/fleet/fleet3.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Video filming</h4>
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/fleet/fleet4.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Touring</h4>
+							</div>
+						</div>
+					</div>
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 				</div>
-				
+			
 				<p class="page-info">Nuestra Flota. Todas nuestras aeronaves cuentan con todos seguros necesarios y permisos de ley correspondientes. Además contamos con sistema de rastreos satelitales y departamento de operaciones para dar así un mejor seguimiento de los vuelos en el territorio nacional. Además contamos con nuestro propio programa de mantenimiento, el cúal es riguroso y auditado por las autoridades aeronáuticas costarricenses y norteamericanas. El equipo de mecánicos ha sido certificado por los propios fabricantes de las aeronaves y son constantemente enviados a entrenamientos en el extranjero para así estar siempre actualizados con lo último en seguridad y estado óptimo de las aeronaves.</p>
 
-				<ul class="tabs" data-tabs="tabs">
-					<li class="active"><a href="#heli">Helicópteros</a></li>
-					<li><a href="#planes">Aviones</a></li>
-				</ul>
+				<div id="fleet-tabs" class="tabbable tabs-left">
+				  <ul class="nav nav-tabs">
+				    <li class="active"><a href="#a350" data-toggle="tab">A350 Star</a></li>
+				    <li class=""><a href="#r66" data-toggle="tab">Robinson R66</a></li>
+				    <li class=""><a href="#r44" data-toggle="tab">Robinson R44</a></li>
+				    <li class=""><a href="#r22" data-toggle="tab">Robinson R22</a></li>
+				  </ul>
 
-				<div id="my-tab-content" class="tab-content">
-					<div class="active tab-pane" id="heli">
-						<p>Con nuestra variedad y estilos helicópteros podemos complacer a cualquier tipo de viajeros. Contamos con la mayor y más moderna flota de helicópteros del país, garantizamos así que siempre abrá un helicótero disponible para usted y los suyos.</p>
+				  <div class="tab-content">
+				    <div class="tab-pane active" id="a350">
+				    	<h2>Eurocopter A350 Star</h2>
+							<p>Con nuestra variedad y estilos helicópteros podemos complacer a cualquier tipo de viajeros. Contamos con la mayor y más moderna flota de helicópteros del país, garantizamos así que siempre abrá un helicótero disponible para usted y los suyos.</p>
 
-						<ul class="media-grid">
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="./img/fleet/desc.jpg" alt="" width="176">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="./img/fleet/desc1.jpg" alt="" width="176">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="./img/fleet/desc2.jpg" alt="" width="176">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="./img/fleet/desc3.jpg" alt="" width="176">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="./img/fleet/desc4.jpg" alt="" width="176">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="./img/fleet/desc5.jpg" alt="" width="176">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="./img/fleet/desc6.jpg" alt="" width="176">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="./img/fleet/desc7.jpg" alt="" width="176">
-								</a>
-							</li>
-						</ul>
-					</div>
+							<ul class="thumbnails span7">
+							  <li class="span4">
+							    <a rel="lightbox-cats" href="img/fleet/desc.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc1.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc1.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc2.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc2.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc3.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc3.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc4.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc4.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc5.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc5.jpg" alt="">
+							    </a>
+							  </li>
+							</ul>
+				    </div>
 
-					<div class="tab-pane" id="planes">
-						<p>Al igual que con los helicóteros, la seguridad en tema de aviones es nuestra prioridad. Nuestra flota de aviones está lista para despegar en 30 minutos, por lo que usted puede estar en ese destino, o en esa reunión con la prontitud y seguridad que el volar brinda. En Costa Rica existen aeropuertos públicos y privados por toda la geografía nacional, por lo que estamos seguros que donde sea que necesite llegar, podremos darle el servicio que merece.</p>
+				    <div class="tab-pane" id="r66">
+				    	<h2>Robinson R66 (Turbine)</h2>
+							<p>Con nuestra variedad y estilos helicópteros podemos complacer a cualquier tipo de viajeros. Contamos con la mayor y más moderna flota de helicópteros del país, garantizamos así que siempre abrá un helicótero disponible para usted y los suyos.</p>
 
-						<ul class="media-grid">
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="http://placehold.it/176x96" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="http://placehold.it/176x96" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="http://placehold.it/176x96" alt="">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="thumbnail" src="http://placehold.it/176x96" alt="">
-								</a>
-							</li>
-						</ul>
-					</div>
+							<ul class="thumbnails span7">
+							  <li class="span4">
+							    <a rel="lightbox-cats" href="img/fleet/desc.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc1.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc1.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc2.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc2.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc3.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc3.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc4.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc4.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc5.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc5.jpg" alt="">
+							    </a>
+							  </li>
+							</ul>
+				    </div>
+
+				    <div class="tab-pane" id="r44">
+				    	<h2>Robinson R44 (3 pax + pilot)</h2>
+							<p>Con nuestra variedad y estilos helicópteros podemos complacer a cualquier tipo de viajeros. Contamos con la mayor y más moderna flota de helicópteros del país, garantizamos así que siempre abrá un helicótero disponible para usted y los suyos.</p>
+
+							<ul class="thumbnails span7">
+							  <li class="span4">
+							    <a rel="lightbox-cats" href="img/fleet/desc.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc1.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc1.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc2.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc2.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc3.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc3.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc4.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc4.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc5.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc5.jpg" alt="">
+							    </a>
+							  </li>
+							</ul>
+				    </div>
+
+				    <div class="tab-pane" id="r22">
+				    	<h2>Robinson R22 (Trainer or single pax)</h2>
+							<p>Con nuestra variedad y estilos helicópteros podemos complacer a cualquier tipo de viajeros. Contamos con la mayor y más moderna flota de helicópteros del país, garantizamos así que siempre abrá un helicótero disponible para usted y los suyos.</p>
+
+							<ul class="thumbnails span7">
+							  <li class="span4">
+							    <a rel="lightbox-cats" href="img/fleet/desc.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc1.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc1.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc2.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc2.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc3.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc3.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc4.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc4.jpg" alt="">
+							    </a>
+							  </li>
+							  <li class="span2">
+							    <a rel="lightbox-cats" href="img/fleet/desc5.jpg" class="thumbnail">
+							      <img src="./img/fleet/desc5.jpg" alt="">
+							    </a>
+							  </li>
+							</ul>
+				    </div>
+				  </div>
 				</div>
-			</div><!-- /span12 -->
 
-			<div class="span4 sidebar">
+			</div><!-- /span9 -->
+
+			<div class="span3 sidebar">
 				<div id="social" class="ac">
-
-					<a href="//facebook.com/aerotourcr" target="_blank" id="link-fb" class="icon-btn big">f</a>
-					<a href="#" target="_blank" id="link-gp" class="icon-btn big">g</a>
-					<a href="//linkedin.com/pub/aerotourcr" target="_blank" id="link-li" class="icon-btn big">l</a>
-					<a href="//youtube.com/user/Aerotourcr/videos" target="_blank" id="link-yt" class="icon-btn big">y</a>
-					<a href="#" id="link-sy" class="icon-btn big">s</a>
-
+					<a href="//facebook.com/aerotourcr" target="_blank" id="link-fb" class="ico-btn big">f</a>
+					<a href="//plus.google.com/118023243299011851814" target="_blank" id="link-gp" class="ico-btn big">g</a>
+					<a href="//linkedin.com/pub/aerotour-costa-rica/47/360/4b" target="_blank" id="link-li" class="ico-btn big">l</a>
+					<a href="//youtube.com/user/aerotourchannel" target="_blank" id="link-yt" class="ico-btn big">y</a>
+					<a href="callto//:aerotourcr" id="link-sy" class="ico-btn big">s</a>
 				</div>
 
 				<span class="separator">---</span>
