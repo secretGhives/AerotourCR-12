@@ -4,9 +4,8 @@ define([
 	'underscore',
 	'backbone',
 	'text!templates/home/main.html',
-	//autostart
 	'bootstrap',
-	'classes/roundabout'
+	'lightbox'
 ], function($, _, Backbone, mainHomeTemplate){
 
 	var mainHomeView = Backbone.View.extend({
@@ -17,6 +16,7 @@ define([
 			this.el.html(mainHomeTemplate);
 
 			$('#flyCarousel').carousel();
+			$('.lightbox').lightbox();
 
 		}
 	});

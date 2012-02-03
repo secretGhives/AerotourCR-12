@@ -12,7 +12,7 @@ require.config({
     order: 'libs/require/order',
     templates: '../templates',
     bootstrap: 'libs/bootstrap/bootstrap',
-    slimbox: 'libs/slimbox/slimbox2'
+    lightbox: 'libs/lightbox/lightbox'
   }
 
 });
