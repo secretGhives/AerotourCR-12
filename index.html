@@ -1,32 +1,17 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-	<title>AerotourCR</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+  <title>AEROTOURCR - Helicopters / Airplanes en Costa Rica </title>
 
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-
-	<!-- Temp Style REMOVE -->
-	<link rel="stylesheet" href="css/lightbox/classic/jquery.lightbox.css">
-	<link rel="stylesheet" href="css/custom.css">
-	<link rel="stylesheet" href="css/su.css">
-	<!-- <link rel="stylesheet" href="css/duckhunt.css"> -->
-
-	<!--[if (gte IE 6)&(lte IE 8)]>
-		<script type="text/javascript" src="js/libs/selectivizr-min.js"></script>
-	<![endif]-->
-	
-	<!-- REQUIRE SCRIPTS (INIT) -->
-	<script data-main="js/main" src="js/libs/require/require.js"></script>
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="assets/css/slimbox2.css">
+  <link rel="stylesheet" href="assets/css/sexyslider.css">
+  <link rel="stylesheet" href="assets/css/su.css">
 
 	<!-- OTHER INIT 
 	<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>-->
@@ -66,9 +51,9 @@
 			<label class="footer-label">©AerotourCR</label>
 
 			<aside class="clear ac">
-				<img class="sponsors" src="./img/logos/hai.png" alt="Member of Heliocpter Association International"/>
-				<img class="sponsors" src="./img/logos/canatur.png" alt="Member of Canatur"/>
-				<img class="sponsors" src="./img/logos/robinson.png" alt="Authorized Robinson Helicopter Dealer"/>
+				<img class="sponsors" src="./assets/img/logos/hai.png" alt="Member of Heliocpter Association International"/>
+				<img class="sponsors" src="./assets/img/logos/canatur.png" alt="Member of Canatur"/>
+				<img class="sponsors" src="./assets/img/logos/robinson.png" alt="Authorized Robinson Helicopter Dealer"/>
 			</aside>
 		</div>
 	</div>
@@ -86,8 +71,48 @@
 			</div>
 		</div>
 	</div>
+
+
+          
+
+
+  <!-- Libraries -->
+  <script src="./assets/libs/jquery/jquery.js"></script>
+  <script src="./assets/libs/underscore/underscore.js"></script>
+  <script src="./assets/libs/backbone/backbone.js"></script>
+  <script src="./assets/libs/bootstrap/bootstrap.js"></script>
+
+  <!-- Plugins 
+  <script src="./assets/libs/jquery/easing.js"></script>-->
+  <script src="./assets/libs/sexyslider/sexyslider.js"></script>
+  <script src="./assets/libs/slimbox/slimbox2.js"></script>
+
+  <!-- Application -->
+  <script src="./app/app.js"></script>
+  <script src="./app/modules/helper.js"></script>
+  <script src="./app/modules/landing.js"></script>
+  <script src="./app/modules/fly.js"></script>
+  <script src="./app/modules/fleet.js"></script>
+  <script src="./app/modules/administration.js"></script>
+  <script src="./app/modules/sales.js"></script>
+
+
+  <script>
+  !function ($) {
+    $(function(){
+
+
+      $('[rel=tip]').tooltip();
+      //$("[rel=pop]").popover();
+      
+
+    })
+  }(window.jQuery)
+  </script>
+
 </body>
-<!--// &#9734;  ☆ KUZYA
+</html>
+<!--// &#9734;  ☆ KUZYA.COM
                              -~-%%%-,,
                            ,%       ^2%
                           -ZZ2       22
@@ -107,7 +132,6 @@
                                 LL/
 
     ┌────────────────────────────────────────────────────────┐
-    │ Date of Creation ........................... Year 2012 │
+    │ Date of Creation ........................ 02 Year 2012 │
     └────────────────────────────────────────────────────────┘
 //-->
-</html>
