@@ -50,22 +50,30 @@ padding: 0;
 margin: 0;
 }
 
-
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover { color: #333; font-weight: bold; }
 
 
 .carousel .item { max-height: 465px; overflow: hidden; }
 
-#page .marge { margin-top: 59px; }
-#page .container { background: rgba(255, 255, 255, 0.93); }
-#page .page-header { margin: 0.3em 0 1px 1em; border-bottom: 1px dashed #efefef; }
-#page .page-header h1 { margin: 6px; display: inline-block; vertical-align: super; color: #666; }
-#page .sidebar address { padding-right: 13px; }
-#page .sidebar .separator {color: white; border-bottom: 1px solid #eee; display: block; }
-#page figure { padding: 0; margin: 0; }
-#page figcaption { margin: 0.3em 0 1em 1em; color: #666; font-size: 0.8em; }
-#page .tabs, #page .tab-content { margin-left: 20px; }
-#page .page-info { font-size: 1.3em; padding: 1em 2em; line-height: normal; }
-#page .media-grid { margin-top: 3em; }
+#main .marge { margin-top: 59px; }
+#main .container { background: rgba(255, 255, 255, 0.93); }
+#main .page-header { margin: 0.3em 0 1px 1em; border-bottom: 1px dashed #efefef; }
+#main .page-header h1 { margin: 6px; display: inline-block; vertical-align: super; color: #666; }
+#main .sidebar { 
+opacity: 0.3; 
+transition: opacity 0.3s;
+-moz-transition: opacity 0.3s;
+-webkit-transition: opacity 0.3s;
+-o-transition: opacity 0.3s;
+}
+#main .sidebar:hover { opacity: 1; }
+#main .sidebar address { padding-right: 13px; }
+#main .sidebar .separator {color: white; border-bottom: 1px solid #eee; display: block; }
+#main figure { padding: 0; margin: 0; }
+#main figcaption { margin: 0.3em 0 1em 1em; color: #666; font-size: 0.8em; }
+#main .tabs, #main .tab-content { margin-left: 20px; }
+#main .page-info { font-size: 1.3em; padding: 1em 2em; line-height: normal; }
+#main .media-grid { margin-top: 3em; }
 #social { margin-top: 1em; }
 #social a { font-size: 1.6em; padding: 0; line-height: normal; text-decoration: none; }
 
@@ -241,9 +249,13 @@ address strong, address tel, address a { display: block; }
 
 
 /*
- * SECTION 
+ * SECTION  ADMINISTRATION
 */
-
+#page-admin .span9 .form-horizontal,
+#page-sales .span9 .form-horizontal { padding-left: 1em; }
+#page-admin .span9 .nav-tabs,
+#page-fly .span9 .nav-tabs { padding: 0 3em; }
+#page-fly .form-horizontal { margin-top: 2em; }
 
 
 /*

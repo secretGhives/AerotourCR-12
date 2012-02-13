@@ -1,25 +1,26 @@
-// Filename: views/leasing/main
-define([
-	'jquery',
-	'underscore',
-	'backbone',
-	'text!templates/leasing/main.html'
-], function($, _, Backbone, leasingTemplate){
+(function(Leasing) {
 
-	var leasingView = Backbone.View.extend({
-		el: $("#page"),
-		render: function(){
+	Leasing.Model = Backbone.Model.extend({ /* ... */ });
+	Leasing.Collection = Backbone.Collection.extend({ /* ... */ });
+	Leasing.Router = Backbone.Router.extend({ /* ... */ });
 
-			//render template
-			this.el.html(leasingTemplate);
+	// This will fetch the tutorial template and render it.
+	Leasing.Views.Home = Backbone.View.extend({
+		template: "app/templates/leasing/main.html",
+		render: function(done) {
+			var view = this;
+			// Fetch the template, render it to the View element and call done.
+			aerotour.fetchTemplate(this.template, function(tmpl) {
+				view.el.innerHTML = tmpl();
+				done(view.el);
 
-			$("[rel=pop]").popover( {offset: 10} ).click(function(e) { e.preventDefault() });
-			$("[rel=tip]").twipsy({live: true});
-			if ($("[rel=roundabout]").length > 0){
-				$("[rel=roundabout]").roundabout();
-			};
-			
+				/**
+				 * Do stuff here
+				 */
+				console.log("Leasing");
+				
+			});
 		}
 	});
-	return new leasingView;
-});
+
+})(aerotour.module("leasing"));
