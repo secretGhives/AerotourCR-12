@@ -6,7 +6,7 @@
 
   // This will fetch the tutorial template and render it.
   Landing.Views.Home = Backbone.View.extend({
-    template: "app/templates/landing/main.html",
+    template: "app/templates/landing/main1.html",
     render: function(done) {
       var view = this;
       // Fetch the template, render it to the View element and call done.
