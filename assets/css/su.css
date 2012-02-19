@@ -360,7 +360,7 @@ width:0px;
 }
 .ac_menu .btn { line-height: 69px; }
 .ac_menu nav .btn { line-height: normal; display: inline-block; }
-.ac_menu > ul{ float:right; margin-right: 1em; }
+.ac_menu > ul{ float:right; margin-right: 1em; white-space: nowrap; }
 .ac_menu > ul > li{ float:left; position:relative; height:90px; overflow:hidden; margin: 0 0.3em; }
 .ac_menu > ul > li a{
 margin-top: 4px !important;
