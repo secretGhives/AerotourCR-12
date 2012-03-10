@@ -9,12 +9,7 @@
 
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/slimbox2.css">
-  <!-- <link rel="stylesheet" href="assets/css/sexyslider.css"> -->
   <link rel="stylesheet" href="assets/css/su.css">
-
-	<!-- OTHER INIT 
-	<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>-->
-
 </head>
 
 <body>
@@ -52,24 +47,7 @@
 				<img class="sponsors" src="assets/img/logos/robinson.png" alt="Authorized Robinson Helicopter Dealer"/>
 			</aside>
 		</div>
-	</div>
-
-	<!-- Map modal screen -->
-	<div id="modal-from-dom" class="modal hide fade">
-		<div class="modal-header">
-			<a href="#" class="close">×</a>
-			<h3>Contactenos</h3>
-		</div>
-		<div class="modal-body">
-			<div id="map">
-				<br/>Actual map will go here, maybe
-				<br /><small><a href="http://www.google.com/maps?q=aerotour&amp;hl=en&amp;ie=UTF8&amp;view=map&amp;cid=2902145994640288262&amp;hq=aerotour&amp;hnear=&amp;ll=9.958741,-84.140993&amp;spn=0.006295,0.006295&amp;t=m&amp;vpsrc=0&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-			</div>
-		</div>
-	</div>
-
-
-          
+	</div>        
 
 
   <!-- Libraries -->
@@ -78,7 +56,10 @@
   <script src="assets/libs/backbone/backbone.js"></script>
   <script src="assets/libs/bootstrap/bootstrap.js"></script>
 
-
+  <!-- Plugins -->
+  <script src="assets/libs/jquery/easing.js"></script>
+  <!--<script src="assets/libs/sexyslider/sexyslider.js"></script>-->
+  <script src="assets/libs/slimbox/slimbox2.js"></script>
 
   <!-- Application -->
   <script src="app/aerotour.js"></script>
@@ -87,16 +68,12 @@
   <script src="app/modules/fleet.js"></script>
   <script src="app/modules/administration.js"></script>
   <script src="app/modules/sales.js"></script>
-  <script src="app/index.js"></script>
-
-  <!-- Plugins -->
-  <script src="assets/libs/jquery/easing.js"></script>
-  <!--<script src="assets/libs/sexyslider/sexyslider.js"></script>-->
-  <script src="assets/libs/slimbox/slimbox2.js"></script>
 
   <script>
   !function ($) {
     $(function(){
+
+      window.aerotourInstance = $('#main').aerotourUi({ });
 
 
       $('[rel=tip]').tooltip();
