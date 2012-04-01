@@ -1,9 +1,9 @@
 <div id="page-fly" class="container marge">
 
 	<div class="content">
-		<div class="page-header">
+		<!-- <div class="page-header">
 			<h1>Vuele con Aerotour <small>Una Experiencia sin igual..</small></h1>
-		</div>
+		</div> -->
 
 		<div class="row">
 
@@ -94,12 +94,13 @@
 
 					<div class="tab-pane fade" id="quote">
 
-						<form class="form-horizontal" action="page_submit" method="post" accept-charset="utf-8">
+						<form class="form-horizontal" method="post" accept-charset="utf-8" id="quoteForm" name="quoteForm">
+
 							<fieldset>
 								<div class="control-group">
 									<label class="control-label" for="quote-name">Nombre</label>
 									<div class="controls">
-										<input type="text" class="input-xlarge" id="quote-name">
+										<input type="text" class="input-xlarge" id="quote-name" required>
 									</div>
 								</div>
 
@@ -108,7 +109,7 @@
 									<div class="controls">
 										<div class="input-prepend">
 											<span class="add-on">@</span>
-											<input class="span2" id="quote-email" size="16" type="text">
+											<input class="span2" id="quote-email" size="16" type="email" required>
 										</div>
 									</div>
 								</div>
@@ -141,7 +142,7 @@
 									</div>
 								</div>
 								<div class="form-actions">
-									<button type="submit" class="btn btn-primary">Enviar</button>
+									<button id="quote-submit" type="button" class="btn btn-primary">Enviar</button>
 								</div>
 							</fieldset>
 						</form>
@@ -201,13 +202,13 @@
 					<p><a class="btn" href="#media">Vea »</a></p>
 				</div> -->
 
-				<span class="separator">---</span>
+				<!-- <span class="separator">---</span>
 
 				<div class="ac">
 					<a href="http://aensacr.com" target="_blank">
 						<img src="./assets/img/logos/aensa-logo.png" width="100%" height="auto" rel="tip" title="Aprendir volar" data-placement="left" data-content="Aprentde como volar like a champ!" />
 					</a>
-				</div>
+				</div> -->
 				
 			</div>
 
@@ -220,19 +221,38 @@
 !function ($) {
 	$(function(){
 
-		//$('#flyCarousel').carousel();
 		$('.lightbox').slimbox();
-		// $('#sexy-wrapper').SexySlider({
-		// 		width     : 700,
-		// 		height    : 420,
-		// 		delay     : 3000,
-		// 		strips    : 1, // <-- this do the trick
-		// 		autopause : false,
-		// 		navigation: '#navigation',
-		// 		control   : '#control',
-		// 		effect    : 'fountain'
-		// 	});
+		$('#page-title').html('<small>Una Experiencia sin igual..</small>');
 
+	  $("#quote-submit").click(function() {
+
+	  	$(this).attr('disabled', true);
+
+		  var name = $("#quote-name").val();
+			var email = $("#quote-email").val();
+	    var phone = $("#quote-tel").val();
+			var pax = $("#quote-pax").val();
+			var body = $("#quote-text").val();
+
+			var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone + '&pax=' + pax + '&body=' + body;
+			//alert (dataString);return false;
+
+			$.ajax({
+	      type: "POST",
+	      url: "/assets/php/processQuote.php",
+	      data: dataString,
+	      success: function() {
+	        console.warn("MAIL SENT");
+	        $("#quote-submit").attr('disabled', false);
+	        document.quoteForm.reset();
+	      },
+	      error: function() {
+	      	console.warn("ERROR HAPPENED");
+	      	$("#quote-submit").attr('disabled', false);
+	      }
+	     });
+	    return false;
+		});
 
 	})
 }(window.jQuery)

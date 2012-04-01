@@ -1,9 +1,9 @@
 <div id="page-sales" class="container marge">
 
 	<div class="content">
-		<div class="page-header">
+		<!-- <div class="page-header">
 			<h1>Adquisición de Aeronaves.</h1>
-		</div>
+		</div> -->
 
 		<div class="row">
 
@@ -42,34 +42,34 @@
 
 				<p class="page-info">¿Para que lo quiere?... ¿Para cúantas personas?... ¿Cúal es la misión? Si tiene la respuesta para esas preguntas podemos asesorarlo con la adquicisión de su helicóptero. Una de las empresas de GRUPO AEROTOUR, se llamada AENSA, es la única representante autorizada por parte de ROBINSON HELICOPTER COMPANY para la venta de este modelo de helicóptero, siendo el más vendido en el mundo, por ser seguro, accesible y eficiente. Por supuesto, si desea otro modelo de helicóptero, nuestra red de socios a nivel internacional cuentan con un inventario de aeronaves que le garantizan una inversión inteligente</p>
 
-				<form class="form-horizontal" action="page_submit" method="post" accept-charset="utf-8">
+				<form class="form-horizontal" method="post" accept-charset="utf-8" id="salesForm" name="salesForm">
 					<fieldset>
 						<legend>Request a quote for an Aircraft</legend>
 						<div class="control-group">
-							<label class="control-label" for="quote-name">Nombre</label>
+							<label class="control-label" for="sales-name">Nombre</label>
 							<div class="controls">
-								<input type="text" class="input-xlarge" id="quote-name">
+								<input type="text" class="input-xlarge" id="sales-name">
 							</div>
 						</div>
 
 						<div class="control-group">
-						  <label class="control-label" for="quote-email">Email</label>
+						  <label class="control-label" for="sales-email">Email</label>
 						  <div class="controls">
 						    <div class="input-prepend">
 						      <span class="add-on">@</span>
-						      <input class="span2" id="quote-email" size="16" type="text">
+						      <input class="span2" id="sales-email" size="16" type="text">
 						    </div>
 						  </div>
 						</div>
 
 						<div class="control-group">
-							<label class="control-label" for="quote-text">Comentarios</label>
+							<label class="control-label" for="sales-text">Comentarios</label>
 							<div class="controls">
-								<textarea class="input-xlarge" id="quote-text" rows="3"></textarea>
+								<textarea class="input-xlarge" id="sales-text" rows="3"></textarea>
 							</div>
 						</div>
 						<div class="form-actions">
-							<button type="submit" class="btn btn-primary">Enviar</button>
+							<button id="sales-submit" type="button" class="btn btn-primary">Enviar</button>
 						</div>
 					</fieldset>
 				</form>
@@ -118,13 +118,13 @@
 					<p><a class="btn" href="#media">Vea »</a></p>
 				</div> -->
 
-				<span class="separator">---</span>
+				<!-- <span class="separator">---</span>
 
 				<div class="ac">
 					<a href="http://aensacr.com" target="_blank">
 						<img src="./assets/img/logos/aensa-logo.png" width="100%" height="auto" rel="tip" title="Aprendir volar" data-placement="left" data-content="Aprentde como volar like a champ!" />
 					</a>
-				</div>
+				</div> -->
 			</div>
 
 		</div><!-- /row -->
@@ -137,6 +137,35 @@
 	$(function(){
 
 		//$('#salesCarousel').carousel();
+		$('#page-title').html('Adquisición <small>de Aeronaves.</small>');
+
+	  $("#sales-submit").click(function() {
+
+	  	$(this).attr('disabled', true);
+
+		  var name = $("#sales-name").val();
+			var email = $("#sales-email").val();
+			var body = $("#sales-text").val();
+
+			var dataString = 'name='+ name + '&email=' + email + '&body=' + body;
+			//alert (dataString);return false;
+
+			$.ajax({
+	      type: "POST",
+	      url: "/assets/php/processSales.php",
+	      data: dataString,
+	      success: function() {
+	        console.warn("SALES MAIL SENT");
+	        $("#sales-submit").attr('disabled', false);
+	        document.salesForm.reset();
+	      },
+	      error: function() {
+	      	console.warn("ERROR HAPPENED");
+	      	$("#sales-submit").attr('disabled', false);
+	      }
+	     });
+	    return false;
+		});
 
 	})
 }(window.jQuery)

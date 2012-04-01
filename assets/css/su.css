@@ -14,6 +14,18 @@ body { background: transparent; height: 100%; }
 #app-footer { margin-top: 0; background: #fff; padding-top: 1em; }
 
 
+
+/* Fleet page*/
+#fleet-tabs img { height: 100%; width: 100%; }
+#page-fleet .nav-tabs, #page-admin .nav-tabs { background: rgba(5, 5, 5,0.02); }
+#fleet-tabs .tab-pane h2 { margin-top: 0.6em; }
+#fleet-tabs .span4 { width: 356px; height: 240px; margin: 1px; }
+#fleet-tabs .span2 { width: 177px; height: 119px; margin: 1px; }
+#page-fleet .thumbnails { margin-top: 1em; margin-left: 1em; }
+#page-fleet .thumbnail { border: 0; padding: 0; margin: 0; box-shadow: 0 0; }
+
+
+
 /* SITE HEADER */
 #app-header { z-index: 900; }
 #app-header .container {
@@ -39,7 +51,7 @@ left: 1em;
 #app-header .brand a {
 text-indent: -9999px;
 display: inline-block;
-width: 181px;
+width: 142px;
 background: url(../img/logos/aerotour.png) no-repeat center center;
 background-size: contain;
 -webkit-background-size: contain;
@@ -48,6 +60,14 @@ background-size: contain;
 height: 56px;
 padding: 0;
 margin: 0;
+}
+
+#page-title {
+position: absolute;
+top: 15px;
+left: 181px;
+color: #999;
+font-size: 1.8em;
 }
 
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover { color: #333; font-weight: bold; }
@@ -59,22 +79,24 @@ margin: 0;
 #main .container { background: rgba(255, 255, 255, 0.93); }
 #main .page-header { margin: 0.3em 0 1px 1em; border-bottom: 1px dashed #efefef; }
 #main .page-header h1 { margin: 6px; display: inline-block; vertical-align: super; color: #666; }
-#main .sidebar { 
-opacity: 0.3; 
-transition: opacity 0.3s;
+#main .sidebar {  }
+#main .sidebar address { padding-right: 13px; opacity: 0.3; transition: opacity 0.3s;
 -moz-transition: opacity 0.3s;
 -webkit-transition: opacity 0.3s;
--o-transition: opacity 0.3s;
-}
-#main .sidebar:hover { opacity: 1; }
-#main .sidebar address { padding-right: 13px; }
+-o-transition: opacity 0.3s; }
+#main .sidebar address:hover { opacity: 1; }
 #main .sidebar .separator {color: white; border-bottom: 1px solid #eee; display: block; }
 #main figure { padding: 0; margin: 0; }
 #main figcaption { margin: 0.3em 0 1em 1em; color: #666; font-size: 0.8em; }
 #main .tabs, #main .tab-content { margin-left: 20px; }
 #main .page-info { font-size: 1.3em; padding: 1em 2em; line-height: normal; }
+#admin-tabs .page-info { padding-left: 0; }
 #main .media-grid { margin-top: 3em; }
-#social { margin-top: 1em; }
+#social { margin-top: 1em; opacity: 0.3; transition: opacity 0.3s;
+-moz-transition: opacity 0.3s;
+-webkit-transition: opacity 0.3s;
+-o-transition: opacity 0.3s; }
+#social:hover { opacity: 1; }
 #social a { font-size: 1.6em; padding: 0; line-height: normal; text-decoration: none; }
 
 
@@ -82,8 +104,6 @@ transition: opacity 0.3s;
 .roundabout li { background: transparent; }
 
 
-/* Fleet page*/
-#fleet-tabs img { min-height: 100px; }
 
 
 footer { position: absolute; width: 100%; bottom: 0; z-index: 9; }
@@ -93,9 +113,9 @@ footer #sitemap h2 { font-size: 20px; }
 footer aside { text-align: right; background: rgba(255, 255, 255, 0.96); z-index: 9; overflow: hidden; position: relative; }
 footer aside #toggleSitemap { position: absolute; left: 13px; top: 9px; }
 #app-footer aside img { margin: 2px 2em 0 0; }
+#app-footer a img { max-height: 43px; }
 address strong, address tel, address a { display: block; }
 .footer-label { display: inline-block; float: left; margin-left: 1em; margin-top: 2em; }
-
 
 
 
