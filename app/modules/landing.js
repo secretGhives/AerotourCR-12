@@ -2,7 +2,7 @@
 
 AerotourCR.Modules.register({
   id: 'landing',
-  template: "app/templates/landing/main3.html"
+  template: "app/templates/landing/main.html"
 });
 
 })(jQuery);

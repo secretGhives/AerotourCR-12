@@ -1,148 +1,234 @@
-<!-- <link rel="stylesheet" href="css/vacordian.css"> -->
+<style>
+html { background: #fff; overflow: hidden; }
+#app-header {display: none;}
+#app-footer { position: fixed; display: block; bottom: 0; left: 0; right: 0; margin: 0; width: 100%; padding: 0; }
+#app-footer aside {
+margin: 0;
+padding: 0;
+position: relative;
+top: 3px;
+}
 
-<article id="landing-page" class="container">
+#landing-logo {
+position: absolute;
+height: 80px;
+top: 69px;
+left: 0;
+right: 0;
+background-position: 9px 0px;
+}
+#landing-logo img {
+display: block;
+position: absolute;
+top: 17px;
+left: 33px;
+height: 69px;
+}
+#safetyAward {
+top: 81px;
+left: 307px;
+}
 
-	<h1 id="site-logo"><img src="./img/logos/aerotour.png" width="202px" height="56px" /></h1>
-	<div id="safetyAward"><img src="./img/logos/SafetyAward.png" width="146px" height="129px" /></div>
+#photodiv {
+background-repeat: no-repeat;
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+}
+#photodiv img { height: 100%; width: 100%; } 
 
-	<section id="inair" class="sec-nav">
+#root-container {
+z-index: 999;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+}
 
-		<h1>EN EL AIRE</h1>
+.sub-div {
+background: #fff;
+position: absolute;
+top: 0;
+bottom: 48px;
+right: 0;
+left: auto;
+min-width: 369px;
+max-width: 420px;
+padding: 6px;
+padding-top: 22px;
+display: none;
+z-index: 9;
+}
 
+.div_close {
+position: absolute;
+top: 6px;
+right: 9px;
+font-weight: bold;
+cursor: pointer;
+font-size: 18px;
+}
+
+
+#show-contacts {
+position: absolute;
+top: 111px;
+left: 575px;
+}
+
+#on-ground {
+position: absolute;
+top: 111px;
+left: 496px;
+}
+
+#in-air {
+position: absolute;
+top: 111px;
+left: 426px;
+}
+</style>
+
+
+<div id="root-container">
+	<!-- LOGO AND SAFETY -->
+	<h1 id="landing-logo"><img src="./assets/img/logos/aerotour.png" /><span>Helicopteros y Avionetas</span>AerotourCR</h1>
+	<div id="safetyAward"><img src="./assets/img/logos/SafetyAward.png" width="142px" /></div>
+
+	<!-- IN AIR -->
+	<a href="#" id="in-air" class="btn btn-primary landing-btn">En Aire</a>
+	<div class="in-air sub-div">
+		<span class="div_close">X</span>
 		<nav id="nav-home">
-			<a href="#" title="OMG">Vuele con Aerotour</a>
+			<h2>Vuele con Aerotour</h2>
 			<p class="info">
-			Contactenos 24 horas al dia, 365 dias al ano, podemos llevarlo a cualquier destino de nuestro pais.
+			Contáctenos 24 horas al día, 365 días al año, podemos llevarlo a cualquier destino de nuestro país. 
 			<br/><br/>
-			<button class="btn primary" onclick="window.location='#fly'">Ir a esta seccion</button>
-			<button class="btn primary" onclick="window.location='#fly'">Cotizacion</button>
-			<button class="btn primary" onclick="window.location='#fly'">Destinos</button>
+			<a class="btn btn-primary" href="#fly">Ir a esta seccion</a>
+			<a class="btn btn-primary" href="#fly">Cotizacion</a>
+			<a class="btn btn-primary" href="#fly">Destinos</a>
 			</p>
 		</nav>
 
 		<nav id="nav-fleet">
-			<a href="#" title="Cool">Nuestra Flota</a>
+			<h2>Nuestra Flota</h2>
 			<p class="info">
-			Con nuestra flota helicopters usted podra viajar seguro y rapido a cualquier destino.  Contamos con aeronaves de diferentes capacidades.
+			Con nuestra flota helicópteros usted podrá viajar seguro y rápido a cualquier destino. Contamos con aeronaves de diferentes capacidades.
 			<br/><br/>
-			<button class="btn primary" onclick="window.location='#fleet'">Flota</button>
+			<a class="btn btn-primary" href="#fleet">Flota</a>
 			</p>
 		</nav>
+	</div>
 
-	</section>
-
-	<section id="onground" class="sec-nav">
-
-		<h1>EN LA TIERRA</h1>
-
+	<!-- ON GROUND -->
+	<a href="#" id="on-ground" class="btn btn-primary landing-btn">En Tierra</a>
+	<div class="on-ground sub-div">
+		<span class="div_close">X</span>
 		<nav id="nav-admin">
-			<a href="#" title="OMG">Administracion de Aeronaves</a>
+			<h2>Administración de Aeronaves</h2>
 			<p class="info">
-			En Aerotour, nuestra finalidad es darle la plena expericiencia de opracion y administracion de helicopteros privados, poniendo atencion a todas las tareas escenciales con losmayores estandares internacionales de seguridad y matinimiento.
+			En Aerotour, nuestra finalidad es darle la plena experiencia de operación y administración de helicópteros privados, poniendo atención a todas las tareas esenciales con los mayores estándares internacionales de seguridad y mantenimiento.
 			<br/><br/>
-			<button class="btn primary" onclick="window.location='#administration'">Ir a esta seccion</button>
+			<a class="btn btn-primary" href="#administration">Ir a esta seccion</a>
 			</p>
 		</nav>
 
 		<nav id="nav-sales">
-			<a href="#" title="Cool">Ventas y Adquisicion de Aeronaves</a>
+			<h2>Ventas y Adquisición de Aeronaves</h2>
 			<p class="info">
-			Con nuestra asesoria, experiencia y guia estamos seguros que tamara las descisiones correctas para elegir la aeronave adecuada y asi disfrutar de los beneficios que existen de tener una aeronave privada.
+			Con nuestra asesoría, experiencia y guía estamos seguros que tomara las decisiones correctas para elegir la aeronave adecuada y así disfrutar de los beneficios que existen de tener una helicóptero privado.
 			<br/><br/>
-			<button class="btn primary" onclick="window.location='#sales'">Ir a esta seccion</button>
+			<a class="btn btn-primary" href="#sales">Ir a esta seccion</a>
 			</p>
 		</nav>
 
-		<nav id="nav-lease">
+		<!-- <nav id="nav-lease">
 			<a href="#" title="Cool">Aquilla de Aeronaves</a>
 			<p class="info">
 			Contar con un helicoptero a toda hora puede ser una realidad con nuestro programa de Aquilla, con el cual con tarifas especiales usted podra estar en cualquier lugar de Costa Rica en minutos.
 			<br/><br/>
-			<button class="btn primary" onclick="window.location='#leasing'">Ir a esta seccion</button>
+			<button class="btn btn-primary" href="#leasing">Ir a esta seccion</button>
 			</p>
-		</nav>
+		</nav> -->
 
-		<nav id="nav-maintance">
+		<!-- <nav id="nav-maintance">
 			<a href="#" title="Cool">Mantenimiento de Aeronaves</a>
 			<p class="info">
 			Nuestro programa de mantenimiento no solo esta certificado internationalmente por los mismos fabricantes de las aeronaves, sino que el equipo humano esta actualizado con las ultimas nejoras en mantemiento para garantizarle asi un viaje seguro.  Brindamos servicios privados de mantenimiento.
 			<br/><br/>
-			<button class="btn primary" onclick="window.location='#maintance'">Ir a esta seccion</button>
+			<button class="btn btn-primary" href="#maintance">Ir a esta seccion</button>
 			</p>
-		</nav>
-
-	</section>
-
-	<footer id="site-footer">
-		<section id="sitemap">
-			
-			<div class="g-fourth">
-				<h2>Media Center</h2>
-				<p>Vea video, fotografias, y articulos relacionados con Aerotour</p>
-				<p><a class="btn" href="#">Vea »</a></p>
-			</div>
-
-			<div class="g-fourth">
-				<h2>Servicios</h2>
-				<ul class="">
-					<li>Viajes Ejecutivos</li>
-					<li>Tours Aereos</li>
-					<li>Carga Externa</li>
-					<li>Publicidad Aerea</li>
-					<li>Translados Medicos</li>
-					<li>Filmacion y Fotografia</li>
-					<li>Lidar Planning</li>
-					<li>Topografia y mapeo</li>
-					<li>Construccion de helipuertos</li>
-				</ul><!-- / -->
-			</div>
-
-			<div class="g-fourth">
-				<h2>Nosotros</h2>
-				 <p>Nuestra promesa. </p>
-				<p><a class="btn" href="#">Vea »</a></p>
-			</div>
-
-			<address class="g-fourth">
-				<strong>Aerotour S.R.L.</strong>
-				<tel>+506 2232-1248</tel>
-				<tel>+506 2232-0660</tel>
-				<a href="mailto:mercadeo@aerotourcr.com">mercadeo@aerotourcr</a>
-				San Jose, Costa Rica<br />
-				Aeropuerto Int. Tobias Bolanos<br />
-				Hangar 26<br /><br />
-				<button data-controls-modal="modal-from-dom" data-backdrop="true" data-keyboard="true" class="btn">Mapa »</button>
-			</address>
-
-		</section><!-- /sitemap -->
-		<aside>
-			<button class="btn" id="toggleSitemap">Sitemap</button>
-			<img class="sponsors" src="./img/logos/aensa.png" alt="AENSA Flight School"/>
-			<img class="sponsors" src="./img/logos/hai.png" alt="Member of Heliocpter Association International"/>
-			<img class="sponsors" src="./img/logos/canatur.png" alt="Member of Canatur"/>
-			<img class="sponsors" src="./img/logos/robinson.png" alt="Authorized Robinson Helicopter Dealer"/>
-			<img class="sponsors" src="./img/logos/amigos.png" alt="Member of AMIGOS Association"/>
-		</aside>
-	</footer>
-
-	<!-- Map modal screen -->
-	<div id="modal-from-dom" class="modal hide fade">
-		<div class="modal-header">
-			<a href="#" class="close">×</a>
-			<h3>Locate us</h3>
-		</div>
-		<div class="modal-body">
-			<div id="map">
-				<br/>Actual map will go here, maybe
-				<br /><small><a href="http://www.google.com/maps?q=aerotour&amp;hl=en&amp;ie=UTF8&amp;view=map&amp;cid=2902145994640288262&amp;hq=aerotour&amp;hnear=&amp;ll=9.958741,-84.140993&amp;spn=0.006295,0.006295&amp;t=m&amp;vpsrc=0&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-			</div>
-		</div>
+		</nav> -->
 	</div>
 
-</article>
+	<!-- CONTACTS -->
+	<a href="#" id="show-contacts" class="btn landing-btn">Contactenos</a>
+	<div class="show-contacts sub-div">
+		<span class="div_close">X</span>
+		<h2>Aerotour</h2>
+		<address class="landing-address">
+			<tel>+506 2232-1248</tel>
+			<tel>+506 2232-0660</tel>
+			<tel>+506 8373-6732</tel>
+			<a href="mailto:ventas@aerotourcr.com">ventas@aerotourcr</a>
+			San Jose, Costa Rica<br />
+			Aeropuerto Int. Tobias Bolaños<br />
+			Hangar 26
+		</address>
+	</div>
+</div>
 
-	<!-- Application colsole log -->
-	<aside id="console">
-		<div id="search_container"></div>
-		<div id="console_output"></div>
-	</aside>
+<div id="bgShow"></div>
+
+<script>
+!function ($) {
+	$(function(){
+
+
+    var imgArr = new Array( // relative paths of images
+      'assets/img/bg/bgHome1.jpg', 
+      'assets/img/bg/bgHome2.jpg', 
+      'assets/img/bg/bgHome3.jpg', 
+      'assets/img/bg/bgHome4.jpg'
+      );
+      
+    var preloadArr = new Array();
+    var i;
+
+    /* preload images */
+    for(i=0; i < imgArr.length; i++){
+      preloadArr[i] = new Image();
+      preloadArr[i].src = imgArr[i];
+    };
+
+    var currImg = 1;
+    var intID = setInterval(changeImg, 6000);
+
+    function changeImg(){
+      $('#bgShow').animate({opacity: 0}, 1000, function(){
+        $(this).css('background','url(' + preloadArr[currImg++%preloadArr.length].src +') top center no-repeat');
+      }).animate({opacity: 1}, 1000);
+    };
+
+
+    //
+		$('.landing-btn').click(function(e) {
+			e.preventDefault();
+			$('.landing-btn').removeClass('active');
+			$('.sub-div').fadeOut('fast');
+			$(this).addClass('active');
+			$(this).next('.sub-div').fadeIn('slow');
+		});
+
+		$('.div_close').click(function(e) {
+			e.preventDefault();
+			$('.landing-btn').removeClass('active');
+			$(this).parent('.sub-div').fadeOut('fast');
+		});
+
+	})
+}(window.jQuery)
+</script>
