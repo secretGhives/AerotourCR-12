@@ -188,6 +188,10 @@
 					Hangar 26
 				</address>
 
+				<span class="separator">---</span>
+
+				<article id="tumblr-post" class="tumblr post"></article>
+
 				<!-- <span class="separator">---</span>
 
 				<div class="margin3x9">
@@ -209,9 +213,16 @@
 	</div>
 </div> <!-- /container -->
 
+<script src="assets/libs/tumblr/tumblr.js"></script>
 <script>
 !function ($) {
 	$(function(){
+
+
+		// TUMBLR
+		/////////////////////
+		$("#tumblr-post").tumblrRss({username: "secretgspot", tagged: "aerotour", limit: 1});
+
 
 		$('.lightbox').slimbox();
 		$('#page-title').html('<small>Una Experiencia sin igual..</small>');

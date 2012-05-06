@@ -21,6 +21,24 @@ body { background: transparent; height: 100%; }
 #app-footer { margin-top: 0; background: #fff; padding-top: 1em; }
 
 
+#tumblr-post cite,
+#tumblr-post time { display: none; }
+#tumblr-post .regularBody {
+display: block;
+padding-right: 1em;
+text-align: justify;
+}
+#tumblr-post .regularBody img {
+width: 100%;
+height: auto;
+}
+#tumblr-post .regularTitle {
+margin-top: 1em;
+display: block;
+font-weight: bold;
+font-size: 16px;
+}
+#tumblr-post .postLink { display: none; }
 
 /* Fleet page*/
 #fleet-tabs img { height: 100%; width: 100%; }
