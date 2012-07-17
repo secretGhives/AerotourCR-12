@@ -1,0 +1,176 @@
+
+<div id="page-sales" class="container marge">
+
+	<div class="content">
+		<!-- <div class="page-header">
+			<h1>Adquisición de Aeronaves.</h1>
+		</div> -->
+
+		<div class="row">
+
+			<div class="span9">
+				<div id="myCarousel" class="carousel slide">
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="./assets/img/sales/sales.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Why buy an Aircraft?</h4>
+								<p>Because it will allow you to reach safely any place in Costa Rica in minutes.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="./assets/img/sales/sales1.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Why buy an Aircraft?</h4>
+								<p>Because it will allow you to reach safely any place in Costa Rica in minutes.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="./assets/img/sales/sales2.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Why buy an Aircraft?</h4>
+								<p>Because it will allow you to reach safely any place in Costa Rica in minutes.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="./assets/img/sales/sales3.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Why buy an Aircraft?</h4>
+								<p>Because it will allow you to reach safely any place in Costa Rica in minutes.</p>
+							</div>
+						</div>
+					</div>
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+				</div>
+
+				<p class="page-info">What’s your motivation? How many passengers? What’s the objective? I you have the answers to those questions, we could advise you in the adquicsition of a helicopter. A subdivision of the Aerotour group is named AENSA,which is the only authorized local sales representative for Robinson Helicopter Company, the company with the best selling helicopter worldwide, a uniquely safe to operate machine, reliable and affordable. Nevertheless, we could find you a different helicopter from another factory with our colleagues net all around the world, who can offer you a varied inventory of aircrafts, and guarantee your investment.</p>
+
+				<form class="form-horizontal" method="post" accept-charset="utf-8" id="salesForm" name="salesForm">
+					<fieldset>
+						<legend>Request a quote for an Aircraft</legend>
+						<div class="control-group">
+							<label class="control-label" for="sales-name">Name</label>
+							<div class="controls">
+								<input type="text" class="input-xlarge" id="sales-name">
+							</div>
+						</div>
+
+						<div class="control-group">
+						  <label class="control-label" for="sales-email">Email</label>
+						  <div class="controls">
+						    <div class="input-prepend">
+						      <span class="add-on">@</span>
+						      <input class="span2" id="sales-email" size="16" type="text">
+						    </div>
+						  </div>
+						</div>
+
+						<div class="control-group">
+							<label class="control-label" for="sales-text">Comments</label>
+							<div class="controls">
+								<textarea class="input-xlarge" id="sales-text" rows="3"></textarea>
+							</div>
+						</div>
+						<div class="form-actions">
+							<button id="sales-submit" type="button" class="btn btn-primary">Send</button>
+						</div>
+					</fieldset>
+				</form>
+				
+			</div><!-- /span9 -->
+
+			<div class="span3 sidebar">
+				<div id="social" class="ac">
+					<a href="//facebook.com/aerotourcr" target="_blank" id="link-fb" class="ico-btn big">f</a>
+					<a href="//plus.google.com/118023243299011851814" target="_blank" id="link-gp" class="ico-btn big">g</a>
+					<a href="//linkedin.com/pub/aerotour-costa-rica/47/360/4b" target="_blank" id="link-li" class="ico-btn big">l</a>
+					<a href="//youtube.com/user/aerotourchannel" target="_blank" id="link-yt" class="ico-btn big">y</a>
+					<a href="callto//:aerotourcr" id="link-sy" class="ico-btn big">s</a>
+				</div>
+
+				<span class="separator">---</span>
+
+				<div class="margin3x9">
+					<br />
+					<h3>Services</h3>
+					<ul class="">
+						<li>Purchase of Aircrafts</li>
+						<li>Sales of Aircrafts</li>
+					</ul><!-- / -->
+				</div>
+
+				<span class="separator">---</span>
+
+				<address class="ar">
+					<br />
+					<h3>Aerotour</h3>
+					<tel>+506 2232-1248</tel>
+					<tel>+506 2232-0660</tel>
+					<tel>+506 8373-6732</tel>
+					<a href="mailto:ventas@aerotourcr.com">ventas@aerotourcr</a>
+					San Jose, Costa Rica<br />
+					Aeropuerto Int. Tobias Bolaños<br />
+					Hangar 26
+				</address>
+
+				<!-- <span class="separator">---</span>
+
+				<div class="margin3x9">
+					<h3>Media Center</h3>
+					<p>Vea videos, fotografías, y artículos relacionados con Aerotour</p>
+					<p><a class="btn" href="#media">Vea »</a></p>
+				</div> -->
+
+				<!-- <span class="separator">---</span>
+
+				<div class="ac">
+					<a href="http://aensacr.com" target="_blank">
+						<img src="./assets/img/logos/aensa-logo.png" width="100%" height="auto" rel="tip" title="Aprendir volar" data-placement="left" data-content="Aprentde como volar like a champ!" />
+					</a>
+				</div> -->
+			</div>
+
+		</div><!-- /row -->
+
+	</div><!-- /content -->
+
+</div> <!-- /container -->
+<script>
+!function ($) {
+	$(function(){
+
+		//$('#salesCarousel').carousel();
+		$('#page-title').html('Aquisition <small>of Aircrafts.</small>');
+
+	  $("#sales-submit").click(function() {
+
+	  	$(this).attr('disabled', true);
+
+		  var name = $("#sales-name").val();
+			var email = $("#sales-email").val();
+			var body = $("#sales-text").val();
+
+			var dataString = 'name='+ name + '&email=' + email + '&body=' + body;
+			//alert (dataString);return false;
+
+			$.ajax({
+	      type: "POST",
+	      url: "/assets/php/processSales.php",
+	      data: dataString,
+	      success: function() {
+	        console.warn("SALES MAIL SENT");
+	        $("#sales-submit").attr('disabled', false);
+	        document.salesForm.reset();
+	      },
+	      error: function() {
+	      	console.warn("ERROR HAPPENED");
+	      	$("#sales-submit").attr('disabled', false);
+	      }
+	     });
+	    return false;
+		});
+
+	})
+}(window.jQuery)
+</script>

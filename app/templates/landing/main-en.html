@@ -1,0 +1,235 @@
+
+<style>
+html { background: #fff; overflow: hidden; }
+#app-header {display: none;}
+#app-footer { position: fixed; display: block; bottom: 0; left: 0; right: 0; margin: 0; width: 100%; padding: 0; }
+#app-footer aside {
+margin: 0;
+padding: 0;
+position: relative;
+top: 3px;
+}
+
+#landing-logo {
+position: absolute;
+height: 80px;
+top: 69px;
+left: 0;
+right: 0;
+background-position: 9px 0px;
+}
+#landing-logo img {
+display: block;
+position: absolute;
+top: 17px;
+left: 33px;
+height: 69px;
+}
+#safetyAward {
+top: 81px;
+left: 307px;
+}
+
+#photodiv {
+background-repeat: no-repeat;
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+}
+#photodiv img { height: 100%; width: 100%; } 
+
+#root-container {
+z-index: 999;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+}
+
+.sub-div {
+background: #fff;
+position: absolute;
+top: 0;
+bottom: 48px;
+right: 0;
+left: auto;
+min-width: 369px;
+max-width: 420px;
+padding: 6px;
+padding-top: 22px;
+display: none;
+z-index: 9;
+}
+
+.div_close {
+position: absolute;
+top: 6px;
+right: 9px;
+font-weight: bold;
+cursor: pointer;
+font-size: 18px;
+}
+
+
+#show-contacts {
+position: absolute;
+top: 111px;
+left: 575px;
+}
+
+#on-ground {
+position: absolute;
+top: 111px;
+left: 496px;
+}
+
+#in-air {
+position: absolute;
+top: 111px;
+left: 426px;
+}
+</style>
+
+
+<div id="root-container">
+	<!-- LOGO AND SAFETY -->
+	<h1 id="landing-logo"><img src="./assets/img/logos/aerotour.png" /><span>Helicopters & Airplanes</span>AerotourCR</h1>
+	<div id="safetyAward"><img src="./assets/img/logos/SafetyAward.png" width="142px" /></div>
+
+	<!-- IN AIR -->
+	<a href="#" id="in-air" class="btn btn-primary landing-btn">Air</a>
+	<div class="in-air sub-div">
+		<span class="div_close">X</span>
+		<nav id="nav-home">
+			<h2>Fly with Aerotour</h2>
+			<p class="info">
+			Contact us 24 hours a day, 365 days a year, we will take you to any destination all over the country. 
+			<br/><br/>
+			<a class="btn btn-primary" href="#fly">View this section</a>
+			<a class="btn btn-primary" href="#fly">Quote</a>
+			<a class="btn btn-primary" href="#fly">Destinations</a>
+			</p>
+		</nav>
+
+		<nav id="nav-fleet">
+			<h2>Our Fleet</h2>
+			<p class="info">
+			In our helicopters fleet you will have a safe and save timing form of transportation to many destinations in Costa Rica. Our fleet offer you different cabin’s room capacities for passengers.
+			<br/><br/>
+			<a class="btn btn-primary" href="#fleet">Fleet</a>
+			</p>
+		</nav>
+	</div>
+
+	<!-- ON GROUND -->
+	<a href="#" id="on-ground" class="btn btn-primary landing-btn">Ground</a>
+	<div class="on-ground sub-div">
+		<span class="div_close">X</span>
+		<nav id="nav-admin">
+			<h2>Aircraft management</h2>
+			<p class="info">
+			Aerotour is committed to provide you a complete management and operational service of a prívate helicopter, taking special care of the most essential tasks, with the highest safety and maintenance standards.
+			<br/><br/>
+			<a class="btn btn-primary" href="#administration">View this section</a>
+			</p>
+		</nav>
+
+		<nav id="nav-sales">
+			<h2>Aircrafts Sales and Purchasing</h2>
+			<p class="info">
+			We will guide you through the process of making the right choice during an aircraft’s purchase, therefore when you become a proud owner of a helicopter, you will enjoy the rewarding experience of owning it privately.
+			<br/><br/>
+			<a class="btn btn-primary" href="#sales">View this section</a>
+			</p>
+		</nav>
+
+		<!-- <nav id="nav-lease">
+			<a href="#" title="Cool">Aquilla de Aeronaves</a>
+			<p class="info">
+			Contar con un helicoptero a toda hora puede ser una realidad con nuestro programa de Aquilla, con el cual con tarifas especiales usted podra estar en cualquier lugar de Costa Rica en minutos.
+			<br/><br/>
+			<button class="btn btn-primary" href="#leasing">Ir a esta seccion</button>
+			</p>
+		</nav> -->
+
+		<!-- <nav id="nav-maintance">
+			<a href="#" title="Cool">Mantenimiento de Aeronaves</a>
+			<p class="info">
+			Nuestro programa de mantenimiento no solo esta certificado internationalmente por los mismos fabricantes de las aeronaves, sino que el equipo humano esta actualizado con las ultimas nejoras en mantemiento para garantizarle asi un viaje seguro.  Brindamos servicios privados de mantenimiento.
+			<br/><br/>
+			<button class="btn btn-primary" href="#maintance">Ir a esta seccion</button>
+			</p>
+		</nav> -->
+	</div>
+
+	<!-- CONTACTS -->
+	<a href="#" id="show-contacts" class="btn landing-btn">Contacts</a>
+	<div class="show-contacts sub-div">
+		<span class="div_close">X</span>
+		<h2>Aerotour</h2>
+		<address class="landing-address">
+			<tel>+506 2232-1248</tel>
+			<tel>+506 2232-0660</tel>
+			<tel>+506 8373-6732</tel>
+			<a href="mailto:ventas@aerotourcr.com">ventas@aerotourcr</a>
+			San Jose, Costa Rica<br />
+			Aeropuerto Int. Tobias Bolaños<br />
+			Hangar 26
+		</address>
+	</div>
+</div>
+
+<div id="bgShow"></div>
+
+<script>
+!function ($) {
+	$(function(){
+
+
+    var imgArr = new Array( // relative paths of images
+      'assets/img/bg/bgHome1.jpg', 
+      'assets/img/bg/bgHome2.jpg', 
+      'assets/img/bg/bgHome3.jpg', 
+      'assets/img/bg/bgHome4.jpg'
+      );
+      
+    var preloadArr = new Array();
+    var i;
+
+    /* preload images */
+    for(i=0; i < imgArr.length; i++){
+      preloadArr[i] = new Image();
+      preloadArr[i].src = imgArr[i];
+    };
+
+    var currImg = 1;
+    var intID = setInterval(changeImg, 6000);
+
+    function changeImg(){
+      $('#bgShow').animate({opacity: 0}, 1000, function(){
+        $(this).css('background','url(' + preloadArr[currImg++%preloadArr.length].src +') top center no-repeat');
+      }).animate({opacity: 1}, 1000);
+    };
+
+
+    //
+		$('.landing-btn').click(function(e) {
+			e.preventDefault();
+			$('.landing-btn').removeClass('active');
+			$('.sub-div').fadeOut('fast');
+			$(this).addClass('active');
+			$(this).next('.sub-div').fadeIn('slow');
+		});
+
+		$('.div_close').click(function(e) {
+			e.preventDefault();
+			$('.landing-btn').removeClass('active');
+			$(this).parent('.sub-div').fadeOut('fast');
+		});
+
+	})
+}(window.jQuery)
+</script>
