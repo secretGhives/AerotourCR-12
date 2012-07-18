@@ -194,7 +194,24 @@ address strong, address tel, address a { display: block; }
  * SECTION 
 */
 
-
+#language-switch {
+position: absolute;
+top: 3px;
+left: 9px;
+z-index: 99999;
+background: rgba(214, 244, 247, 0.91);
+padding: 0px 6px 2px 4px;
+}
+#language-switch img {
+max-height: 19px;
+display: inline-block;
+margin-right: 6px;
+}
+#language-switch label {
+display: inline-block;
+margin: 0;
+vertical-align: bottom;
+}
 
 /*
  * SECTION LANDING PAGE
